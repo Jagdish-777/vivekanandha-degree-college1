@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vivekanandha Degree College</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                
+                /* ----colors  */
+                --font-hover-color: #ff7454;
+                --navigation-background: #f9f9f4;
+                --font-color-navigation: #c21c20;
+                --nav-hover-backgroung: #bfd0e2;
+                --black: black;
+                --white: white;
+                
+            }
+            
+            body {
+                font-family: Poppins;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 16px;
+                background-color: var(--nav-hover-backgroung);
+                
+            }
+            
+            
+            .About-home-sub h1,
+            .About-home-sub h2 {
+            font-family: 'Jost', sans-serif;
+            color: var(--black);
+            margin-top: 0;
+            font-style: normal;
+        }
+        
+        /* .About-home-sub h1:hover, .About-home-sub h2:hover {
+            color: var(--font-hover-color);
+        } */
+        
+        .About-home-container {
+            min-width: 100%;
+            background-color: var(--nav-hover-backgroung);
+            box-sizing: border-box;
+            
+        }
+        
+        .flex {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .About-home-sub {
+            width: 50%;
+            height: auto;
+            /* border: 2px solid var(--black); */
+            
+        }
+        
+        .About-image img {
+            width: 100%;
+            height: auto;
+            border: 1px solid var(--black);
+        }
+
+        .About-home-content h2 {
+            font-size: 0.8rem;
+            padding: 10px 10px;
+            color: var(--font-hover-color);
+            text-decoration: underline;
+        }
+
+        .About-home-content h1 {
+            font-size: 2rem;
+            padding: 10px 10px;
+        }
+
+        .About-home-content p {
+            font-size: 1rem;
+            padding: 10px 10px;
+        }
+
+        .btn {
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            font-family: inherit;
+            font-weight: 500;
+            font-size: 16px;
+            padding: 0.7em 1.4em 0.7em 1.1em;
+            color: var(--white);
+            /* background: #ad5389;
+            background: linear-gradient(0deg, rgba(20, 167, 62, 1) 0%, rgba(102, 247, 113, 1) 100%); */
+            background: rgb(242, 212, 170);
+            background: linear-gradient(131deg, rgba(242, 212, 170, 1) 0%, rgba(228, 156, 0, 1) 100%);
+            border: none;
+            box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+            letter-spacing: 0.05em;
+            border-radius: 20em;
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .button-88:hover {
+            box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+        }
+
+        .button-88:active {
+            box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+        }
+
+
+        @media only screen and (max-width: 800px) {
+            .flex {
+                flex-direction: column;
+            }
+
+            .About-home-sub {
+                width: 90%;
+                height: auto;
+                margin: 10px;
+                /* border: 2px solid var(--black); */
+
+            }
+            .About-home-sub img{
+                border: 1px solid var(--black);
+            }
+
+        }
+    </style>
+
+    <style>
+        .enquery-form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--nav-hover-backgroung);
+
+        }
+        .enquiry-sub{
+            width: 50%;
+            box-sizing: border-box;
+        }
+        .enquiry-sub img{
+            width: 100%;
+            height: auto;
+        }
+        .enquery-heading{
+            text-align: center;
+            padding: 2.8px;
+            text-decoration: underline;
+        }
+        
+        form {
+            background-color: #fff;
+            background-color: var(--nav-hover-backgroung);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            width: 90%;
+        }
+        
+        label {
+            display: block;
+            /* margin-bottom: 8px; */
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        @media only screen and (max-width: 800px) {
+            .flex {
+                flex-direction: column;
+            }
+            .enquiry-sub img{
+                margin: 10px 0px;
+            }
+            
+            .enquiry-sub {
+                width: 100%;
+                height: auto;
+                /* border: 2px solid var(--black); */
+
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section>
+        <div class="About-home-container flex">
+            <div class="About-home-sub">
+                <div class="About-image">
+                    <img src="./images/Home/home-about-us-image.png" alt="About Image">
+                </div>
+            </div>
+            <div class="About-home-sub About-home-content">
+                <h2 class="top-about-heading">About Us</h2>
+                <h1 class="middle-about-heading">
+                    Vivekananda Degree & PG college
+                </h1>
+                <p class="paragraph-about">
+                    Our College is well known for its academic excellence and overall development of the students. Some
+                    other education department public relations contracts total in the hundreds of thousands of dollars.
+                </p>
+                <button class="btn">
+                    Read more
+                </button>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="enquery-form-home">
+        <div class="enquiry-container flex">
+            <div class="enquiry-sub enquery-form">
+                <form>
+                    <h1 class="enquery-heading">
+                        Student Inqure Form
+                    </h1>
+                    <label for="firstname">First Name<span style="color: red;">*</span></label>
+                    <input type="text" id="firstname" name="firstname" required>
+
+                    <label for="email">Email<span style="color: red;">*</span></label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone No<span style="color: red;">*</span></label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="courses">Select Course</label>
+                    <select id="courses" name="courses">
+                        <option value="BA">B.A</option>
+                        <option value="BBA">BBA</option>
+                        <option value="BCA">BCA</option>
+                        <option value="BCom">B.Com</option>
+                        <option value="BScPhysical">B.Sc(Physical Science)</option>
+                        <option value="BScLife">B.Sc(Life Sciences)</option>
+                    </select>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="enquiry-sub">
+                <img src="./images/Home/enquiry-form-img-home.jpg" alt="image">
+            </div>
+        </div>
+
+    </section>
+
+
+
+</body>
+
+</html>
