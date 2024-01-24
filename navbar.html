@@ -150,6 +150,139 @@
         }
     </style>
 
+    <!-- about home css  -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+            /* ----colors  */
+            --font-hover-color: #ff7454;
+            --navigation-background: #f9f9f4;
+            --font-color-navigation: #c21c20;
+            --nav-hover-backgroung: #bfd0e2;
+            --black: black;
+            --white: white;
+            
+        }
+        
+        body {
+            font-family: Poppins;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 16px;
+            background-color: var(--nav-hover-backgroung);
+            
+        }
+        
+        
+        .About-home-sub h1,
+        .About-home-sub h2 {
+        font-family: 'Jost', sans-serif;
+        color: var(--black);
+        margin-top: 0;
+        font-style: normal;
+    }
+    
+    /* .About-home-sub h1:hover, .About-home-sub h2:hover {
+        color: var(--font-hover-color);
+    } */
+    
+    .About-home-container {
+        min-width: 100%;
+        background-color: var(--nav-hover-backgroung);
+        box-sizing: border-box;
+        
+    }
+    
+    .flex {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .About-home-sub {
+        width: 50%;
+        height: auto;
+        /* border: 2px solid var(--black); */
+        
+    }
+    
+    .About-image img {
+        width: 100%;
+        height: auto;
+        border: 1px solid var(--black);
+    }
+
+    .About-home-content h2 {
+        font-size: 0.8rem;
+        padding: 10px 10px;
+        color: var(--font-hover-color);
+        text-decoration: underline;
+    }
+
+    .About-home-content h1 {
+        font-size: 2rem;
+        padding: 10px 10px;
+    }
+
+    .About-home-content p {
+        font-size: 1rem;
+        padding: 10px 10px;
+    }
+
+    .btn1 {
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        font-family: inherit;
+        font-weight: 500;
+        font-size: 16px;
+        padding: 0.7em 1.4em 0.7em 1.1em;
+        color: var(--white);
+        /* background: #ad5389;
+        background: linear-gradient(0deg, rgba(20, 167, 62, 1) 0%, rgba(102, 247, 113, 1) 100%); */
+        background: rgb(242, 212, 170);
+        background: linear-gradient(131deg, rgba(242, 212, 170, 1) 0%, rgba(228, 156, 0, 1) 100%);
+        border: none;
+        box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+        letter-spacing: 0.05em;
+        border-radius: 20em;
+        cursor: pointer;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+
+    .button-88:hover {
+        box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+    }
+
+    .button-88:active {
+        box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+    }
+
+
+    @media only screen and (max-width: 800px) {
+        .flex {
+            flex-direction: column;
+        }
+
+        .About-home-sub {
+            width: 90%;
+            height: auto;
+            margin: 10px;
+            /* border: 2px solid var(--black); */
+
+        }
+        .About-home-sub img{
+            border: 1px solid var(--black);
+        }
+
+    }
+</style>
+
     <!-- cards home page style sheet  -->
     <style>
         .container {
@@ -157,7 +290,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background-color: var(--nav-hover-backgroung);
+            background-color: var(--white);
         }
 
         .card {
@@ -280,6 +413,31 @@
         </div>
     </div>
 
+    <!-- about us - home page section  -->
+    <section>
+        <div class="About-home-container flex">
+            <div class="About-home-sub">
+                <div class="About-image">
+                    <img src="./images/Home/home-about-us-image.png" alt="About Image">
+                </div>
+            </div>
+            <div class="About-home-sub About-home-content">
+                <h2 class="top-about-heading">About Us</h2>
+                <h1 class="middle-about-heading">
+                    Vivekananda Degree & PG college
+                </h1>
+                <p class="paragraph-about">
+                    Our College is well known for its academic excellence and overall development of the students. Some
+                    other education department public relations contracts total in the hundreds of thousands of dollars.
+                </p>
+                <button class="btn">
+                    Read more
+                </button>
+
+            </div>
+        </div>
+    </section>
+
     <div class="container">
         <div class="card">
             <div class="img">
@@ -298,7 +456,7 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quaerat iusto adipisci
                     reprehenderit quasi cum perspiciatis, minima reiciendis magni quam!
                 </div>
-                <div class="btn">
+                <div class="btn1">
                     <a href="#">Read more</a>
                 </div>
             </div>
@@ -320,7 +478,7 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quaerat iusto adipisci
                     reprehenderit quasi cum perspiciatis, minima reiciendis magni quam!
                 </div>
-                <div class="btn">
+                <div class="btn1">
                     <a href="#">Read more</a>
                 </div>
             </div>
@@ -342,7 +500,7 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quaerat iusto adipisci
                     reprehenderit quasi cum perspiciatis, minima reiciendis magni quam!
                 </div>
-                <div class="btn">
+                <div class="btn1">
                     <a href="#">Read more</a>
                 </div>
             </div>
