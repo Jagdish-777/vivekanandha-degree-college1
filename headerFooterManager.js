@@ -31,7 +31,7 @@ class SpecialHeader extends HTMLElement{
 }
 customElements.define('specia-header',SpecialHeader)
 
-class SpecialIcon extends HTMLElement{
+class SpecialIconBar extends HTMLElement{
     connectedCallback(){
         this.innerHTML = `
         <div class="icon-bar">
@@ -45,4 +45,4 @@ class SpecialIcon extends HTMLElement{
     }
 }
 
-customElements.define('special-IconBar', SpecialIcon)
+customElements.define('special-icon-bar', SpecialIconBar);
