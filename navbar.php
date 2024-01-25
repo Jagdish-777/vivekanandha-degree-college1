@@ -165,6 +165,7 @@
             --navigation-background: #f9f9f4;
             --font-color-navigation: #c21c20;
             --nav-hover-backgroung: #bfd0e2;
+            --secondary-color: #185c74;
             --black: black;
             --white: white;
 
@@ -542,9 +543,9 @@
         </div>
 
         <div class="nav-links">
-            <a href="#">Home</a>
+            <a href="./Home.php">Home</a>
             <a href="#">About Us</a>
-            <a href="#">Courses</a>
+            <a href="./courses.php">Courses</a>
             <a href="#">Facilities</a>
             <a href="#">Gallery</a>
             <a href="#">Career</a>
