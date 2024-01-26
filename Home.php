@@ -470,7 +470,7 @@
 
     <!-- The social media icon bar -->
     <!-- <specia-Icon-Bar></specia-Icon-Bar> -->
-    <special-IconBar></special-IconBar>
+    <special-icon-bar></special-icon-bar>
     <!-- <div class="icon-bar">
         <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
         <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
@@ -587,7 +587,7 @@
 
     </section>
 
-    <!-- <script>
+    <script>
         let nav = document.querySelector("nav");
         window.onscroll = function () {
             if (document.documentElement.scrollTop > 20) {
@@ -596,7 +596,7 @@
                 nav.classList.remove("sticky");
             }
         }
-    </script> -->
+    </script>
     <script src="./headerFooterManager.js"></script>
     <script src="./js/app.js"></script>
 </body>
