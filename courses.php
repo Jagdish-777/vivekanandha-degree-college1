@@ -137,6 +137,7 @@
             padding: 10px;
             box-shadow: 5px 5px 5px grey;
             border-radius: 10px;
+            border: 1px solid black;
         }
 
         .courses-cards .ug-courses:hover {
@@ -160,6 +161,10 @@
         .courses-cards .ug-courses p {
             height: 110px;
             overflow: hidden;
+        }
+        .courses-cards .ug-courses .btn-courses a {
+            color: var(--white);
+            text-decoration: none;
         }
 
         .btn-courses {
@@ -226,7 +231,7 @@
                     quae totam. Saepe excepturi illum, dolor sapiente nihil illo! Perspiciatis quisquam porro labore,
                     earum et consequuntur
                 </p>
-                <button class="btn-courses">Learn More...</button>
+                <button class="btn-courses"><a href="Courses.php#P.G-Courses">Learn More...</a></button>
 
             </div>
             <div class="ug-courses">
@@ -361,7 +366,7 @@
         </div>
     </div>
 
-    <h1 class="ug-course-heading" id="P.G Courses">P.G Courses</h1>
+    <h1 class="ug-course-heading" id="P.G-Courses">P.G Courses</h1>
     <div class="courses-cards">
 
         <!-- <h1 class="ug-course-heading" id="U.G Courses">B.Com</h1> -->

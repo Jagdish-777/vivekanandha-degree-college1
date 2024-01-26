@@ -8,19 +8,12 @@
     --navigation-background: #f9f9f4;
     --font-color-navigation: #c21c20;
     --nav-hover-backgroung: #bfd0e2;
-
-    margin: 0px;
-    padding: 0;
-    box-sizing: border-box;
     --font-color: #ff6900;
-    /* ----colors  */
     --font-hover-color: #ff7454;
-    --navigation-background: #f9f9f4;
-    --font-color-navigation: #c21c20;
+    --facilities-font-color: #185c74;
     --nav-hover-backgroung-light: #d0dae6;
     --black: black;
     --white: white;
-    --font-color: #ff6900;
 }
 
 body {
@@ -354,20 +347,20 @@ img {
 
 .top-bar-section img {
     width: 100%;
-    height: 300px;
+    height: 100%;
 
 }
 
 .top-bar-section h1 {
-    position: absolute;
-    top: 45%;
-    left: 45%;
-    font-size: 32px;
-    font-family: 'Courier New', Courier, monospace;
     color: #fff;
-    text-decoration: underline;
-    font-weight: 600;
-    text-transform: uppercase;
+    font-family: poppins;
+    font-size: 2rem;
+    font-weight: 700;
+    left: 50%;
+    position: absolute;
+    text-shadow: 2px 2px 4px #00000080;
+    top: 50%;
+    transform: translate(-50%,-50%);
 
 }
 
@@ -403,9 +396,10 @@ img {
 
 }
 
-@media (max-width:600px) {
-    .top-bar-section h1 {
-        left: 40%;
+@media (max-width:800px) {
+    .top-bar-section .top-bar-heading h1 {
+        /* left: 40%; */
+        font-size: 1rem;
 
     }
 

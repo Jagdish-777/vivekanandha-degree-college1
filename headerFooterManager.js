@@ -20,7 +20,7 @@ class SpecialHeader extends HTMLElement{
             <a href="./Home.php">Home</a>
             <a href="#">About Us</a>
             <a href="./courses.php">Courses</a>
-            <a href="#">Facilities</a>
+            <a href="./facilities.php">Facilities</a>
             <a href="#">Gallery</a>
             <a href="#">Career</a>
             <a href="#">Contact</a>
