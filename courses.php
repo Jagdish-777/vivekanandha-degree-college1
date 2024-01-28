@@ -146,6 +146,10 @@
             box-shadow: 7px 7px 5px grey;
             cursor: pointer;
         }
+        .ug-courses .ug-courses-small-content{
+            height: 110px;
+            overflow: hidden;
+        }
 
         .courses-cards .ug-courses h1:hover {
             color: var(--font-color);
@@ -162,6 +166,7 @@
             height: 110px;
             overflow: hidden;
         }
+
         .courses-cards .ug-courses .btn-courses a {
             color: var(--white);
             text-decoration: none;
@@ -224,145 +229,76 @@
 
     <div class="courses-cards">
         <div class="course-flex">
-            <div class="ug-courses">
-                <h1 class="ug-card-heading">B.sc Honors in Computer Science</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat voluptas hic harum consequatur
-                    unde, ipsam ad sit labore, alias necessitatibus porro aut, dignissimos aliquid veritatis. Officiis,
-                    quae totam. Saepe excepturi illum, dolor sapiente nihil illo! Perspiciatis quisquam porro labore,
-                    earum et consequuntur
-                </p>
-                <button class="btn-courses"><a href="Courses.php#P.G-Courses">Learn More...</a></button>
 
-            </div>
-            <div class="ug-courses">
-                <h1 class="ug-card-heading">B.A - HEP (History, Economics and Political Science)</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias maiores, magni dicta explicabo quos
-                    sequi
-                    voluptas iste. Voluptatibus illum dicta, similique facere aspernatur ratione, accusantium nobis
-                    recusandae sapiente iusto, voluptate in repellendus error alias.
-                </p>
-                <button class="btn-courses">Learn More...</button>
+            <?php
+                include('./vdc-dashboard/includes/connect.php');
+                include('./vdc-dashboard/function.php');
 
-            </div>
-            <div class="ug-courses">
-                <h1 class="ug-card-heading">B.C.A</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias maiores, magni dicta explicabo quos
-                    sequi
-                    voluptas iste. Voluptatibus illum dicta, similique facere aspernatur ratione, accusantium nobis
-                    recusandae sapiente iusto, voluptate in repellendus error alias.
-                </p>
-                <button class="btn-courses">Learn More...</button>
+                $fetct_query = "SELECT * FROM `courses` WHERE course_title in ('B.sc Honors in Computer Science','B.A','B.C.A','BBA (Bachelor of Business Administration)')";
+                $result = mysqli_query($con,$fetct_query);
 
-            </div>
-            <div class="ug-courses">
-                <h1 class="ug-card-heading">BBA (Bachelor of Business Administration)</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias maiores, magni dicta explicabo quos
-                    sequi
-                    voluptas iste. Voluptatibus illum dicta, similique facere aspernatur ratione, accusantium nobis
-                    recusandae sapiente iusto, voluptate in repellendus error alias.
-                </p>
-                <button class="btn-courses">Learn More...</button>
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $pgt = $row['program_title'];
+                    echo "<div class='ug-courses'>
+                            <h1 class='ug-card-heading'>" . $row['program_title'] . "</h1>
+                            <div class='ug-courses-small-content'>" . $row['content'] . "</div>
+                            <button class='btn-courses'><a href='call-courses.php?page=$pgt'>Learn More...</a></button>
+                        </div>";
+                }
+            ?>
 
-            </div>
         </div>
-        <h1 class="ug-course-heading" >B.Com</h1>
+        <h1 class="ug-course-heading">B.Com</h1>
         <div class="course-flex">
-            <div class="ug-courses">
-                <h1 class="ug-card-heading">B.Com GENERAL</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat voluptas hic harum consequatur
-                    unde, ipsam ad sit labore, alias necessitatibus porro aut, dignissimos aliquid veritatis. Officiis,
-                    quae totam. Saepe excepturi illum, dolor sapiente nihil illo! Perspiciatis quisquam porro labore,
-                    earum et consequuntur
-                </p>
-                <button class="btn-courses">Learn More...</button>
 
-            </div>
-            <div class="ug-courses">
-                <h1 class="ug-card-heading">COMPUTER APPLICATIONS</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias maiores, magni dicta explicabo quos
-                    sequi
-                    voluptas iste. Voluptatibus illum dicta, similique facere aspernatur ratione, accusantium nobis
-                    recusandae sapiente iusto, voluptate in repellendus error alias.
-                </p>
-                <button class="btn-courses">Learn More...</button>
+            <?php
+                $fetct_query = "SELECT * FROM `courses` WHERE course_title ='B.Com'";
+                $result = mysqli_query($con,$fetct_query);
 
-            </div>
-            <div class="ug-courses">
-                <h1 class="ug-card-heading">Business Analytics</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias maiores, magni dicta explicabo quos
-                    sequi
-                    voluptas iste. Voluptatibus illum dicta, similique facere aspernatur ratione, accusantium nobis
-                    recusandae sapiente iusto, voluptate in repellendus error alias.
-                </p>
-                <button class="btn-courses">Learn More...</button>
-
-            </div>
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $pgt = $row['program_title'];
+                    echo "<div class='ug-courses'>
+                            <h1 class='ug-card-heading'>" . $row['program_title'] . "</h1>
+                            <div class='ug-courses-small-content'>" . $row['content'] . "</div>
+                            <button class='btn-courses'><a href='call-courses.php?page=$pgt'>Learn More...</a></button>
+                        </div>";
+                }
+            ?>
         </div>
-        <h1 class="ug-course-heading" >B.Sc. (Physical Sciences)</h1>
+        <h1 class="ug-course-heading">B.Sc. (Physical Sciences)</h1>
         <div class="course-flex">
-            <div class="ug-courses">
-                <h1 class="ug-card-heading">M.C.Cs</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat voluptas hic harum consequatur
-                    unde, ipsam ad sit labore, alias necessitatibus porro aut, dignissimos aliquid veritatis. Officiis,
-                    quae totam. Saepe excepturi illum, dolor sapiente nihil illo! Perspiciatis quisquam porro labore,
-                    earum et consequuntur
-                </p>
-                <button class="btn-courses">Learn More...</button>
 
-            </div>
-            <div class="ug-courses">
-                <h1 class="ug-card-heading">M.P.Cs</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat voluptas hic harum consequatur
-                    unde, ipsam ad sit labore, alias necessitatibus porro aut, dignissimos aliquid veritatis. Officiis,
-                    quae totam. Saepe excepturi illum, dolor sapiente nihil illo! Perspiciatis quisquam porro labore,
-                    earum et consequuntur
-                </p>
-                <button class="btn-courses">Learn More...</button>
+                
+            <?php
+                $fetct_query = "SELECT * FROM `courses` WHERE course_title ='B.Sc. (Physical sciences)'";
+                $result = mysqli_query($con,$fetct_query);
 
-            </div>
-            <div class="ug-courses">
-                <h1 class="ug-card-heading">M.S.Cs</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias maiores, magni dicta explicabo quos
-                    sequi
-                    voluptas iste. Voluptatibus illum dicta, similique facere aspernatur ratione, accusantium nobis
-                    recusandae sapiente iusto, voluptate in repellendus error alias.
-                </p>
-                <button class="btn-courses">Learn More...</button>
-
-            </div>
-            <div class="ug-courses">
-                <h1 class="ug-card-heading">M.S.Ds (Data Science)</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias maiores, magni dicta explicabo quos
-                    sequi
-                    voluptas iste. Voluptatibus illum dicta, similique facere aspernatur ratione, accusantium nobis
-                    recusandae sapiente iusto, voluptate in repellendus error alias.
-                </p>
-                <button class="btn-courses">Learn More...</button>
-
-            </div>
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $pgt = $row['program_title'];
+                    echo "<div class='ug-courses'>
+                            <h1 class='ug-card-heading'>" . $row['program_title'] . "</h1>
+                            <div class='ug-courses-small-content'>" . $row['content'] . "</div>
+                            <button class='btn-courses'><a href='call-courses.php?page=$pgt'>Learn More...</a></button>
+                        </div>";
+                }
+            ?>
+            
         </div>
-        <h1 class="ug-course-heading" >B.Sc. (life Sciences)</h1>
+        <h1 class="ug-course-heading">B.Sc. (life Sciences)</h1>
         <div class="course-flex">
-            <div class="ug-courses">
-                <h1 class="ug-card-heading">MB.C.BT</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat voluptas hic harum consequatur
-                    unde, ipsam ad sit labore, alias necessitatibus porro aut, dignissimos aliquid veritatis. Officiis,
-                    quae totam. Saepe excepturi illum, dolor sapiente nihil illo! Perspiciatis quisquam porro labore,
-                    earum et consequuntur
-                </p>
-                <button class="btn-courses">Learn More...</button>
+        <?php
+                $fetct_query = "SELECT * FROM `courses` WHERE course_title ='B.Sc. (Life Sciences)'";
+                $result = mysqli_query($con,$fetct_query);
 
-            </div>
-            <div class="ug-courses">
-                <h1 class="ug-card-heading">BC.C.BT</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias maiores, magni dicta explicabo quos
-                    sequi
-                    voluptas iste. Voluptatibus illum dicta, similique facere aspernatur ratione, accusantium nobis
-                    recusandae sapiente iusto, voluptate in repellendus error alias.
-                </p>
-                <button class="btn-courses">Learn More...</button>
-
-            </div>
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $pgt = $row['program_title'];
+                    echo "<div class='ug-courses'>
+                            <h1 class='ug-card-heading'>" . $row['program_title'] . "</h1>
+                            <div class='ug-courses-small-content'>" . $row['content'] . "</div>
+                            <button class='btn-courses'><a href='call-courses.php?page=$pgt'>Learn More...</a></button>
+                        </div>";
+                }
+            ?>
         </div>
     </div>
 
@@ -371,26 +307,20 @@
 
         <!-- <h1 class="ug-course-heading" id="U.G Courses">B.Com</h1> -->
         <div class="course-flex">
-            <div class="ug-courses">
-                <h1 class="ug-card-heading">M.Com.</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat voluptas hic harum consequatur
-                    unde, ipsam ad sit labore, alias necessitatibus porro aut, dignissimos aliquid veritatis. Officiis,
-                    quae totam. Saepe excepturi illum, dolor sapiente nihil illo! Perspiciatis quisquam porro labore,
-                    earum et consequuntur
-                </p>
-                <button class="btn-courses">Learn More...</button>
+        <?php
 
-            </div>
-            <div class="ug-courses">
-                <h1 class="ug-card-heading">M.Sc. (Computer Science)</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias maiores, magni dicta explicabo quos
-                    sequi
-                    voluptas iste. Voluptatibus illum dicta, similique facere aspernatur ratione, accusantium nobis
-                    recusandae sapiente iusto, voluptate in repellendus error alias.
-                </p>
-                <button class="btn-courses">Learn More...</button>
+                $fetct_query = "SELECT * FROM `courses` WHERE course_title in ('M.Com.','M.Sc. (Computer Science)')";
+                $result = mysqli_query($con,$fetct_query);
 
-            </div>
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $pgt = $row['program_title'];
+                    echo "<div class='ug-courses'>
+                            <h1 class='ug-card-heading'>" . $row['program_title'] . "</h1>
+                            <div class='ug-courses-small-content'>" . $row['content'] . "</div>
+                            <button class='btn-courses'><a href='call-courses.php?page=$pgt'>Learn More...</a></button>
+                        </div>";
+                }
+            ?>
         </div>
     </div>
 

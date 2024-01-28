@@ -388,31 +388,6 @@
 </head>
 
 <body>
-    <!-- <div class="nav">
-        <input type="checkbox" id="nav-check">
-        <div class="nav-header">
-            <div class="nav-title">
-                <img src="VDC-LOGO.svg" alt="VDC">
-            </div>
-        </div>
-        <div class="nav-btn">
-            <label for="nav-check">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-        </div>
-
-        <div class="nav-links">
-            <a href="./navbar.php">Home</a>
-            <a href="#">About Us</a>
-            <a href="./courses.php">Courses</a>
-            <a href="#">Facilities</a>
-            <a href="#">Gallery</a>
-            <a href="#">Career</a>
-            <a href="#">Contact</a>
-        </div>
-    </div> -->
 
     <specia-header></specia-header>
 

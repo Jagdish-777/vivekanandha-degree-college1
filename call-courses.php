@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="VDC-LOGO.svg" type="image/icon type">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Courses</title>
 
     <!-- top bar css  -->
@@ -84,7 +87,7 @@
             font-weight: 400;
             font-style: normal;
             font-size: 16px;
-            background-color: var(--nav-hover-backgroung);
+            background-color: var(--white);
         }
 
         .capsule {
@@ -98,7 +101,7 @@
 
         .courses h1 {
             font-family: 'Jost', sans-serif;
-            margin: 20px 0px;
+            text-align: center;
             color: var(--font-color);
             text-decoration: underline;
             margin: 10px;
@@ -107,26 +110,30 @@
         }
 
         .capsule h1 {
-            color: var(--black);
+            color: var(--white);
         }
 
         .courses-section-heading {
-            margin: 20px;
             padding: 5px;
             /* box-shadow: 0 0 0 5px grey; */
             border-radius: 10px;
             box-shadow: 0 0 2px 2px grey;
             /* with blur shadow*/
+            width: 90%;
+            margin: 10px auto;
         }
 
         .courses-section-heading ul {
             margin: 20px;
         }
+
         .courses-section-heading ol {
             margin: 20px;
         }
 
-        .courses-section-heading h1,h2,h3 {
+        .courses-section-heading h1,
+        h2,
+        h3 {
             font-family: 'Jost', sans-serif;
             margin: 20px 0px;
             color: var(--font-color);
@@ -145,14 +152,19 @@
             color: var(--font-color);
         }
 
+        .course-table .table-heaings{
+            width: 90%;
+            margin: 10px auto;
+        }
+
         .course-table .table-heaings table {
-            margin-left: 10px;
+            width: 100%;
         }
 
         .course-table .table-heaings table tr th {
             background-color: var(--font-color);
             color: var(--black);
-            width: 300px;
+            width: 30%;
             padding: 10px;
             border: 1px solid black;
             border-radius: 10px;
@@ -161,30 +173,45 @@
         .course-table .table-heaings table tr td {
             /* background-color: var(--font-color); */
             color: var(--black);
-            width: 300px;
+            width: 30%;
             padding: 10px;
             border: 1px solid black;
             border-radius: 10px;
         }
 
         .course-forms form {
-            margin-left: 10px;
+            margin: 10px auto;
+            width: 90%;
         }
 
-        .course-forms form input {
+        .course-forms form .form-input-tags input {
             color: var(--black);
-            width: 300px;
-            margin: 10px 0px;
+            width: 33%;
+            /* margin: 10px 0px; */
             padding: 10px;
             border: 1px solid black;
             border-radius: 10px;
         }
+        .course-forms form textarea {
+            color: var(--black);
+            width: 100%;
+            /* margin: 10px 0px; */
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+        .course-forms form input[type="submit"] {
+            background-color: var(--font-color);
+            color: var(--white);
+            padding: 10px;
+            border-radius: 10px;
+            width: 100px;
+        }
 
         @media (max-width:900px) {
-            .course-forms form input {
+            .course-forms form .form-input-tags input {
                 width: 99%;
                 margin: 10px auto;
-
             }
 
         }
@@ -192,10 +219,18 @@
 </head>
 
 <body>
+    <!-- including header  -->
+    <specia-header></specia-header>
+
+    <!-- including social bar  -->
+    <special-icon-bar></special-icon-bar>
+
     <?php
     include("./vdc-dashboard/includes/connect.php");
     include("./vdc-dashboard/function.php");
-    $header_details = executeSelect('courses',array());
+    $new = $_GET['page'];
+    // $new = "B.C.A";
+    $header_details = executeSelect('courses',$new);
     
     
 
@@ -211,23 +246,24 @@
 
     <!-- courses section in courses page  -->
     <section class="courses">
-        
-    <?php foreach($header_details as $row => $header){?>
-        
-    <div class="capsule">
+
+        <?php foreach($header_details as $row => $header){?>
+
+        <div class="capsule">
             <h1>
-                Home | <?=$header['page_title']?>
+                Home |
+                <?=$header['program_title']?>
             </h1>
         </div>
         <h1>
             Course Overview
         </h1>
         <div class="courses-section-heading">
-        <?=$header['content']?>
+            <?=$header['content']?>
 
-            
+
         </div>
-        <?php } ?>
+        
 
         <div class="course-table">
             <h1>Study Options:</h1>
@@ -239,26 +275,38 @@
                         <th>College Code</th>
                     </tr>
                     <tr>
-                        <td>BCA</td>
-                        <td>3 years full time</td>
-                        <td>11250</td>
+                        <td><?=$header['program_title']?></td>
+                        <td><?=$header['Duration']?></td>
+                        <td><?=$header['code']?></td>
                     </tr>
                 </table>
             </div>
         </div>
+        <?php } ?>
 
         <div class="course-forms">
             <form action="">
-                <label for="firstname"><input type="text" name="firstname" placeholder="First Name"></label>
-                <label for="Email"><input type="text" name="Email" placeholder="Your Email"></label>
-                <label for="Phone"><input type="text" name="Phone" placeholder="Phone No"></label>
+                <div class="form-input-tags">
+                    <label for="firstname"><input type="text" name="firstname" placeholder="First Name"></label>
+                    <label for="Email"><input type="text" name="Email" placeholder="Your Email"></label>
+                    <label for="Phone"><input type="text" name="Phone" placeholder="Phone No"></label>
+                </div>
                 <br>
+                <label for="message">Message:</label><textarea id="message" name="message" rows="4" required></textarea>
+                <br>
+
+        <input type="submit" value="Submit">
+
 
             </form>
         </div>
 
 
     </section>
+
+
+    <script src="./headerFooterManager.js"></script>
+    <script src="./js/app.js"></script>
 
 </body>
 
