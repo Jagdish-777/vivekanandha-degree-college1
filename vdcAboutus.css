@@ -1,0 +1,420 @@
+*{
+    margin: 0;
+    padding:0; 
+    /* ----colors  */
+   --blue :  #d6edf7;
+   --light_cream: #fffef4;
+}
+
+ /* Origin of the college */
+.vdcabout{
+    text-align: center;
+    background-color: var( --light_cream);
+    padding: 3%;
+}
+
+  
+  
+.vdcabout>P{
+    margin-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+
+/* principal details  */
+
+.principal{
+    display: flex;
+    align-items: LEFT;
+    width: 100%;
+    align-self: stretch;
+    min-height: 500px;
+    justify-content: space-around;
+    background-color: var(--blue);
+    box-shadow: 0 5px 5px -12px rgba(0,0,0,0.25);
+    padding: 50px 40px;
+    
+}
+
+.principal2{
+    background-color: var(--light_cream);
+}
+.Principal_info{
+    display: flex;
+    margin-top: 70px;
+    width: 100%;
+    justify-items: center;
+}
+
+.Principal_info>div>h2{
+    color: var(--text-color, #252B42);
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.1px;
+    margin-left: 20px;
+}
+
+.Principal_info>div>p{
+    color: var(--second-text-color, #737373);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    margin-top: 5% ;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.2px;
+    width: 80%;
+}
+
+.Practice_img>img{
+    width: 100%;
+    height: 500px;
+    /* margin-right: 50px; */
+}
+
+.names{
+    color: red;
+    text-align: right;
+}
+
+/* school misson and vision tagline*/
+
+.school_vision_tagline{
+    min-height: 120px;
+    flex-shrink: 0;
+    background: rgb(255,167,0);
+    background: radial-gradient(circle, rgba(255,167,0,0.32816876750700286) 0%, rgba(249,153,7,0.4822303921568627) 100%);
+    text-align: center;
+    /* margin-left: 200px; */
+}
+
+.school_vision_tagline>h2{
+    color: black;
+    padding-top: 20px;
+    height: 21px;
+    flex-shrink: 0;
+    text-align: center;
+    font-size: 50px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 151%;
+    letter-spacing: -0.135px;
+}
+
+
+
+/* school misson and vision*/
+
+.school_misson{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 50px ;
+    gap: 100px;
+    justify-content: center;
+    background-color:  var(--blue);
+}
+
+.misson_pic>img{
+    width: 500px;
+}
+
+.misson_content{
+    margin-top: 100px;
+    text-align: center;
+    width: 50%;
+   
+}
+
+.misson_content>p{
+    margin-top: 40px;
+    color: var(--second-text-color, #737373);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+}
+
+.school_vision{
+    display: flex;
+    width: 100%;
+    padding: 50px;
+    gap: 100px;
+    justify-content: center;
+    background: var(--light_cream);
+    box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .13), 0 1px 4px 0 rgba(0, 0, 0, .11);
+}
+
+.vision_pic>img{
+    width: 500px;
+}
+
+.vision_content{
+    margin-top: 100px;
+    text-align: center;
+    width: 50%;
+    margin-bottom: 100px;
+}
+
+.vision_content>p{
+    margin-top: 40px;
+    color: var(--second-text-color, #737373);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+} 
+
+  /* style for animation */
+
+  .vdcabout, .school_vision_tagline, .misson_content, .misson_pic, .vision_content, .vision_pic, .Principal_info, .Practice_img{
+    opacity: 0;
+    
+  }
+  .vdcabout.animate__animated, .school_vision_tagline.animate__animated, .misson_content.animate__animated, 
+  .misson_pic.animate__animated, .vision_content.animate__animated, .vision_pic.animate__animated, .Principal_info.animate__animated, .Practice_img.animate__animated {
+    opacity: 1;
+    animation-duration: 2.5s;
+  }
+
+
+  /* Media Query */
+
+  @media only screen and (max-width: 900px) {
+
+    .vdcabout{
+        width: auto;
+    }
+
+
+    .Principal_Details{
+        display: flex;
+        flex-direction: column;
+    }
+    .vdcabout.animate__animated, .school_vision_tagline.animate__animated, .misson_content.animate__animated, 
+    .misson_pic.animate__animated, .vision_content.animate__animated, .vision_pic.animate__animated, .Principal_Details.animate__animated ,
+     .principal.animate__animated{
+    opacity: 1;
+    animation-duration: 0s;
+  }
+  .vdcabout, .school_vision_tagline, .misson_content, .misson_pic, .vision_content, .vision_pic, .principal{
+    opacity: 1;
+  }
+
+  .school_tagline{
+    width: 100%;
+  }
+
+  .school_misson{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    padding: 0%;
+    padding-left: 0%;
+    gap: 0%;
+  }
+  .misson_content{
+    width: 100%;
+    padding-left: auto;
+    margin-left: 2%;
+    justify-content: center;
+  }
+  .misson_pic>img{
+    width: 90%;
+    padding: 4%;
+  }
+  .school_vision{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:0%;
+    width: 100%;
+    gap: 0%;
+    padding-left: 0%;
+  }
+  
+  .vision_content{
+    width: 100%;
+    margin-right: 2%;
+  }
+  .vision_pic>img{
+    width: 90%;
+    padding: 4%;
+  }
+  .vision_content{
+    margin-bottom: 0%;
+    justify-content: center;
+  }
+  .school_vision_tagline>h2{
+    font-size: 100%;
+  }
+
+  .school_vision_tagline{
+    min-height: 60px;
+  }
+
+  .principal{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+   
+  }
+  .Principal_info>div>p{
+    width: auto;
+  }
+
+  .Practice_img{
+    width: 100%;
+    padding: 2%;
+    margin-right: 0%;
+  }
+
+  .vision_content>p{
+    width: 90%;
+  }
+
+  .misson_content>p{
+    width: 90%;
+  }
+  }
+
+
+
+
+  /* <!-- ******************************* footer start******************************************** --> */
+
+
+
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+.new_footer_area {
+    background: #fbfbfd;
+    width: 100%;
+    margin: 0px auto;
+}
+
+.footerlogo {
+    margin-top: 3%;
+    width: 20%;
+    align-items: center;
+}
+.footerlogo img{
+    width: 100%;
+    align-items: center;
+}
+
+.footer_container {
+    display: flex;
+    justify-content: center;
+    color: #555;
+    font-family: 'Poppins';
+    line-height: 20px;
+    width: 100%;
+    overflow: hidden;
+    background: #f5f4f3;
+}
+
+.footertext {
+    color: #555;
+    text-decoration: none;
+}
+
+.clickable-element:hover {
+    color: #e63131;
+    transition: all 0.3s ease;
+}
+
+.footercontent {
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    padding-top: 5%;
+    color: #555;
+}
+
+.footercontent:hover {
+    letter-spacing: 1px;
+    color: #e63131;
+}
+
+.footer-1 {
+    width: 20%;
+    font-size: 20px;
+    padding: 1%;
+    margin-top: 1%;
+    /* margin: 0px auto; */
+}
+
+.hidden-list {
+    margin-left: 20px;
+}
+
+.footerheading {
+    padding-top: 3%;
+    padding-bottom: 5%;
+    font-size: 25px;
+}
+
+.footer-address {
+    margin-top: 4%;
+}
+
+.email {
+    padding: 10%;
+    font-size: 20px;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+.gmaps {
+    width: 100%;
+    padding: 20px;
+}
+
+
+/*************footer End*****************/
+
+/* footer media query */
+
+
+@media only screen and (max-width: 1000px) {
+    .footer_container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        padding-left: 3%;
+    }
+
+    .footer-1 {
+        width: 100%;
+    }
+
+    .gmaps>iframe {
+        width: 100%;
+        padding-right: 3%;
+
+    }
+
+    .footerheading {
+        color: #e66363;
+        text-decoration: underline #e66363;
+    }
+
+    .footercontent {
+        padding-top: 2%;
+    }
+
+
+}

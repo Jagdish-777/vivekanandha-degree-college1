@@ -18,7 +18,7 @@ class SpecialHeader extends HTMLElement{
 
         <div class="nav-links">
             <a href="./Home.php">Home</a>
-            <a href="#">About Us</a>
+            <a href="./About-us.php">About Us</a>
             <a href="./courses.php">Courses</a>
             <a href="./facilities.php">Facilities</a>
             <a href="#">Gallery</a>
