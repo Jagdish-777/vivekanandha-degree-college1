@@ -156,14 +156,15 @@
             padding: 0 40px;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: space-evenly;
             background-color: var(--white);
             overflow: hidden;
         }
 
         .card {
-            height: 280px;
-            max-width: 350px;
+            height: 300px;
+            /* max-width: 350px; */
+            width: 40%;
             margin: 0 20px;
             background: white;
             transition: 0.4s;
@@ -171,7 +172,7 @@
         }
 
         .card:hover {
-            height: 450px;
+            height: 350px;
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
         }
 
@@ -249,7 +250,8 @@
             }
 
             .card {
-                max-width: 700px;
+                /* max-width: 700px; */
+                width: 80%;
                 margin: 20px 0;
             }
         }
@@ -468,20 +470,42 @@
                     Dr. K. Naresh
                 </div>
                 <p>
-                    Secretary & Correspondent
+                    Chairman's Message
                 </p>
             </div>
             <div class="bottom-text">
-                <div class="text">
+                <!-- <div class="text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quaerat iusto adipisci
                     reprehenderit quasi cum perspiciatis, minima reiciendis magni quam!
-                </div>
+                </div> -->
                 <div class="btn1">
                     <a href="#">Read more</a>
                 </div>
             </div>
         </div>
         <div class="card">
+            <div class="img">
+                <img src="#">
+            </div>
+            <div class="top-text">
+                <div class="name">
+                    Dr. K. Naresh
+                </div>
+                <p>
+                    Secretary & Correspondent
+                </p>
+            </div>
+            <div class="bottom-text">
+                <!-- <div class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quaerat iusto adipisci
+                    reprehenderit quasi cum perspiciatis, minima reiciendis magni quam!
+                </div> -->
+                <div class="btn1">
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="card">
             <div class="img">
                 <img src="#">
             </div>
@@ -502,29 +526,7 @@
                     <a href="#">Read more</a>
                 </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="img">
-                <img src="#">
-            </div>
-            <div class="top-text">
-                <div class="name">
-                    Dr. K. Naresh
-                </div>
-                <p>
-                    Secretary & Correspondent
-                </p>
-            </div>
-            <div class="bottom-text">
-                <div class="text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quaerat iusto adipisci
-                    reprehenderit quasi cum perspiciatis, minima reiciendis magni quam!
-                </div>
-                <div class="btn1">
-                    <a href="#">Read more</a>
-                </div>
-            </div>
-        </div>
+        </div> -->
     </div>
     
 
@@ -593,7 +595,9 @@
         </div>
     </div>
 
-    <script>
+    <special-footer></special-footer>
+
+    <!-- <script>
         let nav = document.querySelector("nav");
         window.onscroll = function () {
             if (document.documentElement.scrollTop > 20) {
@@ -602,7 +606,7 @@
                 nav.classList.remove("sticky");
             }
         }
-    </script>
+    </script> -->
     <script src="./headerFooterManager.js"></script>
     <script src="./js/app.js"></script>
 </body>

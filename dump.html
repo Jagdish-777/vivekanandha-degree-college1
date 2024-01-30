@@ -3,53 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
     <style>
-        .dropdown-content{
-            display: none;
-            font-size: 300px;
-        }
-        .courses-drop:hover .dropdown-content{
-            display: block;
-            position: absolute;
-            top: 500px;
-            left: 0;
+        .new_footer_area {
+    background: #fbfbfd;
+    width: 100%;
+}
 
-        }
-        
+.footerlogo {
+    margin-top: 3%;
+    width: 100%;
+    align-items: center;
+}
+.footerlogo img{
+    width: 100px;
+    height: auto;
+}
+
+.footer_container {
+    display: flex;
+    justify-content: center;
+    color: #555;
+    font-family: 'Poppins';
+    line-height: 20px;
+    width: 100%;
+    overflow: hidden;
+    background: #f5f4f3;
+}
+
+.footertext {
+    color: #555;
+    text-decoration: none;
+}
+
+.clickable-element:hover {
+    color: #e63131;
+    transition: all 0.3s ease;
+}
+
+.footercontent {
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    padding-top: 5%;
+    color: #555;
+}
+
+.footercontent:hover {
+    letter-spacing: 1px;
+    color: #e63131;
+}
+
+.footer-1 {
+    width: 100%;
+    font-size: 20px;
+    padding: 1%;
+    margin-top: 1%;
+}
+
+.hidden-list {
+    margin-left: 20px;
+}
+
+.footerheading {
+    padding-top: 3%;
+    padding-bottom: 5%;
+    font-size: 25px;
+}
+
+.footer-address {
+    margin-top: 4%;
+}
+
+.email {
+    padding: 10%;
+    font-size: 20px;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+.gmaps {
+    width: 100%;
+    padding: 20px;
+}
+
+
+/*************footer End*****************/
+
+/* footer media query */
+
+
+@media only screen and (max-width: 1000px) {
+    .footer_container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        padding-left: 3%;
+    }
+
+    .footer-1 {
+        width: 100%;
+    }
+
+    .gmaps>iframe {
+        width: 100%;
+        padding-right: 3%;
+
+    }
+
+    .footerheading {
+        color: #e66363;
+        text-decoration: underline #e66363;
+    }
+
+    .footercontent {
+        padding-top: 2%;
+    }
+
+
+}
     </style>
 </head>
 <body>
+    <footer class="new_footer_area bg_color">
 
-    <div class="nav">
-        <input type="checkbox" id="nav-check">
-        <div class="nav-header">
-            <div class="nav-title">
-                <img src="VDC-LOGO.svg" alt="VDC">
+        <div class="footer_container">
+            <div class=" footer-1 footerlogo">
+                <img src="VDC-LOGO.svg" alt="">
             </div>
-        </div>
-        <div class="nav-btn">
-            <label for="nav-check">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
+            <div class="footer-1 adderss">
+                <h4 class="footerheading">Address</h4>
+                <p class="footer-address"><b>Lane Opp. B.J.P. Office & Kukatpally Busstop, Kukatpally, Hyderabad -
+                        500072</b></p><br>
+
+                <a class="footercontent" href="tel:9394068321" class="footertext"><b>93940 68321</b></a><br>
+                <a class="footercontent" href="tel:040-40116098" class="footertext"><b>040-4011 6098</b></a><br>
+                <a class="footercontent" href="#" class="footertext"><b>vdckukatpally@gmail.com</b></a>
+            </div>
+
+            <div class="footer-1 products">
+                <h4 class="footerheading">Quick Links</h4>
+                <a class="footercontent" href="#" class="footertext"><b>&gt; Courses</b> </a><br>
+                <a class="footercontent" href="#" class="footertext"><b>&gt; Facilities</b></a><br>
+                <a class="footercontent" href="#" class="footertext"><b>&gt; Gallery</b></a>
+            </div>
+
+
+            <div class="footer-1 about">
+                <h4 class="footerheading">Courses</h4>
+                <p class="clickable-element" onclick="toggleList1()"><b>&gt; U.G Courses</b> </p>
+                <ul class="hidden-list" id="myList1">
+                    <li><a class="footercontent" href="">B.A</a></li>
+                    <li><a class="footercontent" href="">B.B.A</a></li>
+                    <li><a class="footercontent" href="">B.Com</a></li>
+                    <li><a class="footercontent" href="">B.Sc</a></li>
+                </ul>
+
+                <p class="clickable-element" onclick="toggleList2()"><b>&gt; P.G Courses</b> </p>
+                <ul class="hidden-list" id="myList2">
+                    <li><a class="footercontent" href="">M.Com</a></li>
+                    <li><a class="footercontent" href="">M.Sc</a></li>
+                    <li><a class="footercontent" href="">M.Sc</a></li>
+                </ul>
+            </div>
+            <div class="footer-1 gmaps">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d243553.4722390783!2d78.413125!3d17.48253!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91a4e8e98e37%3A0x6e51dc8fd01e7f2a!2sVivekananda%20Degree%20College!5e0!3m2!1sen!2sin!4v1705918805307!5m2!1sen!2sin"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
         </div>
 
-        <div class="nav-links">
-            <a href="./Home.php">Home</a>
-            <a href="./About-us.php">About Us</a>
-            <a href="./courses.php" class="courses-drop">Courses</a>
-            <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-              </div>
-            <a href="./facilities.php">Facilities</a>
-            <a href="#">Gallery</a>
-            <a href="#">Career</a>
-            <a href="#">Contact</a>
-        </div>
-    </div>
+
+    </footer>
+
 </body>
 </html>
