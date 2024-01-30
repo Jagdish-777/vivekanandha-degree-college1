@@ -3,34 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        .dropdown-content{
+            display: none;
+            font-size: 300px;
         }
-        body{
-            background-color: lightgray;
+        .courses-drop:hover .dropdown-content{
+            display: block;
+            position: absolute;
+            top: 500px;
+            left: 0;
+
         }
+        
     </style>
 </head>
 <body>
 
-    <div class="home-logos-slider">
-        <div class="logo-slide">
-            <img src="./images/company-logo/amazon-logo.png" alt="No Source">
-            <img src="./images/company-logo/capgemini-logo-2017.svg" alt="No Source">
-            <img src="./images/company-logo/cognizant.svg" alt="No Source">
-            <img src="./images/company-logo/cytel.svg" alt="No Source">
-            <img src="./images/company-logo/deloitte.svg" alt="No Source">
-            <img src="./images/company-logo/hdfc-bank-logo.svg" alt="No Source">
-            <img src="./images/company-logo/ibm.svg" alt="No Source">
-            <img src="./images/company-logo/itc-infotech.svg" alt="No Source">
-            <img src="./images/company-logo/tcs-seeklogo.svg" alt="No Source">
-            <img src="./images/company-logo/wells-fargo.svg" alt="No Source">
+    <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+            <div class="nav-title">
+                <img src="VDC-LOGO.svg" alt="VDC">
+            </div>
+        </div>
+        <div class="nav-btn">
+            <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+
+        <div class="nav-links">
+            <a href="./Home.php">Home</a>
+            <a href="./About-us.php">About Us</a>
+            <a href="./courses.php" class="courses-drop">Courses</a>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            <a href="./facilities.php">Facilities</a>
+            <a href="#">Gallery</a>
+            <a href="#">Career</a>
+            <a href="#">Contact</a>
         </div>
     </div>
-    
 </body>
 </html>

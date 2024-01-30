@@ -18,12 +18,12 @@ class SpecialHeader extends HTMLElement{
 
         <div class="nav-links">
             <a href="./Home.php">Home</a>
-            <a href="./About-us.php">About Us</a>
+            <a href="./vdcAboutus.php">About Us</a>
             <a href="./courses.php">Courses</a>
             <a href="./facilities.php">Facilities</a>
             <a href="#">Gallery</a>
             <a href="#">Career</a>
-            <a href="#">Contact</a>
+            <a href="./vdc-contact.php">Contact</a>
         </div>
     </div>
         `

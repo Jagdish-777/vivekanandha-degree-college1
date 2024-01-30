@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VDC Aboutus</title>
     <link rel="stylesheet" href="vdcAboutus.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
-
+    
+<specia-header></specia-header>
     <!-- Origin of the college -->
 
     <div class="vdcabout">
@@ -67,6 +69,8 @@
             <img src="./images/about/about2.jpeg" alt="">
         </div>
     </div>
+
+    <special-icon-bar></special-icon-bar>
 
     <!-- Principal Details -->
     <div class=" Principal_Details">
@@ -184,6 +188,8 @@
 
 
     </footer>
+
+    <script src="./headerFooterManager.js"></script>
 </body>
 
 </html>

@@ -240,7 +240,8 @@ body {
 
 img {
     vertical-align: middle;
-    max-height: 400px;
+    max-height: 500px;
+    object-fit: cover;
 }
 
 /* Slideshow container */
@@ -249,7 +250,7 @@ img {
     position: relative;
     margin: auto;
     background-color: white;
-    height: 400px;
+    height: 500px;
 }
 
 /* Next & previous buttons */
@@ -310,16 +311,16 @@ img {
 }
 
 /* Fading animation */
-.fade {
+/* .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 60s;
     animation-name: fade;
     animation-duration: 60s;
-}
+} */
 
-@-webkit-keyframes fade {
+/* @-webkit-keyframes fade {
     from {
-        opacity: .6
+        opacity: .9
     }
 
     to {
@@ -329,13 +330,13 @@ img {
 
 @keyframes fade {
     from {
-        opacity: .6
+        opacity: .9
     }
 
     to {
         opacity: 1
     }
-}
+} */
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
@@ -434,3 +435,38 @@ img {
 }
 
 /* top bar css end  */
+
+
+/* slider home sections companies logos  */
+.home-logos-slider{
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: lightgray;
+}
+.home-logos-slider h1{
+    text-align: center;
+    margin: 20px auto;
+    /* color: var(--font-color); */
+    text-decoration: underline;
+}
+.logo-slide{
+    overflow: hidden;
+    display: inline-block;
+    animation: 8s logo-slider infinite linear;
+    padding: 10px 0px;
+}
+.logo-slide img{
+    height: 100PX;
+    margin: 0 20px;
+}
+/* adding animation  */
+@keyframes logo-slider {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    
+}
+/* slider home sections companies logos end  */

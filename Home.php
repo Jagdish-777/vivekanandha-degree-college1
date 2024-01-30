@@ -158,6 +158,7 @@
             align-items: center;
             justify-content: space-between;
             background-color: var(--white);
+            overflow: hidden;
         }
 
         .card {
@@ -207,13 +208,15 @@
             margin-top: 5px;
             background: white;
             opacity: 0;
-            visibility: hidden;
+            /* visibility: hidden; */
             transition: 0.1s;
+            display: none;
         }
 
         .card:hover .bottom-text {
             opacity: 1;
-            visibility: visible;
+            /* visibility: visible; */
+            display: block;
         }
 
         .card .bottom-text .text {
@@ -395,28 +398,28 @@
     <div class="slideshow-container">
         <div class="mySlides fade">
             
-            <img src="./images/courses/1.jpeg" style="width:100%">
+            <img src="./images/Home/slider/slider1.jpg" style="width:100%">
             <div class="text"></div>
         </div>
         <div class="mySlides fade">
             
-            <img src="./images/courses/2.jpeg" style="width:100%">
+            <img src="./images/Home/slider/slider2.jpg" style="width:100%">
             <div class="text"></div>
         </div>
         <div class="mySlides fade">
            
-            <img src="./images/courses/1.jpeg" style="width:100%">
+            <img src="./images/Home/slider/slider3.jpg" style="width:100%">
             <div class="text"></div>
         </div>
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
     <br>
-    <div style="text-align:center">
+    <!-- <div style="text-align:center">
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
+    </div> -->
 
     <!-- about us - home page section  -->
     <section>
@@ -561,6 +564,34 @@
         </div>
 
     </section>
+
+    <div class="home-logos-slider">
+        <h1>Our Key Recuruting Companies:</h1>
+        <div class="logo-slide">
+            <img src="./images/company-logo/amazon-logo.png" alt="No Source">
+            <img src="./images/company-logo/capgemini-logo-2017.svg" alt="No Source">
+            <img src="./images/company-logo/cognizant.svg" alt="No Source">
+            <img src="./images/company-logo/cytel.svg" alt="No Source">
+            <img src="./images/company-logo/deloitte.svg" alt="No Source">
+            <!-- <img src="./images/company-logo/hdfc-bank-logo.svg" alt="No Source"> -->
+            <img src="./images/company-logo/ibm.svg" alt="No Source">
+            <img src="./images/company-logo/itc-infotech.svg" alt="No Source">
+            <img src="./images/company-logo/tcs-seeklogo.svg" alt="No Source">
+            <img src="./images/company-logo/wells-fargo.svg" alt="No Source">
+        </div>
+        <div class="logo-slide">
+            <img src="./images/company-logo/amazon-logo.png" alt="No Source">
+            <img src="./images/company-logo/capgemini-logo-2017.svg" alt="No Source">
+            <img src="./images/company-logo/cognizant.svg" alt="No Source">
+            <img src="./images/company-logo/cytel.svg" alt="No Source">
+            <img src="./images/company-logo/deloitte.svg" alt="No Source">
+            <!-- <img src="./images/company-logo/hdfc-bank-logo.svg" alt="No Source"> -->
+            <img src="./images/company-logo/ibm.svg" alt="No Source">
+            <img src="./images/company-logo/itc-infotech.svg" alt="No Source">
+            <img src="./images/company-logo/tcs-seeklogo.svg" alt="No Source">
+            <img src="./images/company-logo/wells-fargo.svg" alt="No Source">
+        </div>
+    </div>
 
     <script>
         let nav = document.querySelector("nav");

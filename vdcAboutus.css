@@ -301,17 +301,16 @@
 .new_footer_area {
     background: #fbfbfd;
     width: 100%;
-    margin: 0px auto;
 }
 
 .footerlogo {
     margin-top: 3%;
-    width: 20%;
+    width: 100%;
     align-items: center;
 }
 .footerlogo img{
-    width: 100%;
-    align-items: center;
+    width: 100px;
+    height: auto;
 }
 
 .footer_container {
@@ -349,11 +348,10 @@
 }
 
 .footer-1 {
-    width: 20%;
+    width: 100%;
     font-size: 20px;
     padding: 1%;
     margin-top: 1%;
-    /* margin: 0px auto; */
 }
 
 .hidden-list {
