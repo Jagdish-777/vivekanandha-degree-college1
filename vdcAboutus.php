@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VDC Aboutus</title>
     <link rel="stylesheet" href="vdcAboutus.css">
+    <link rel="icon" href="VDC-LOGO.svg" type="image/icon type">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
@@ -13,6 +16,13 @@
 <body>
     
 <specia-header></specia-header>
+<!-- top section  -->
+<div class="top-bar-section">
+        <img src="./images/Courses/background-courses.png" alt="No Image">
+        <h1 class="top-bar-heading">
+            About Us
+        </h1>
+    </div>
     <!-- Origin of the college -->
 
     <div class="vdcabout">
@@ -75,7 +85,7 @@
     <!-- Principal Details -->
     <div class=" Principal_Details">
 
-        <div class="principal">
+        <div class="principal" id="chairman-msg">
             <div class="Principal_info">
                 <div>
                     <h2>CHAIRMAN'S MESSAGE</h2>
@@ -102,7 +112,7 @@
         </div>
 
 
-        <div class="principal principal2">
+        <div class="principal principal2" id="correspondent-msg">
 
             <div class="Principal_info">
                 <div>
@@ -126,17 +136,24 @@
 
         </div>
     </div>
+
+
+    <special-footer></special-footer>
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"
         integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
     <script src="vdcaboutus.js"></script>
 
     <!-- ******************************* footer start******************************************** -->
 
 
-    <footer class="new_footer_area bg_color">
+    <!-- <footer class="new_footer_area bg_color">
 
         <div class="footer_container">
             <div class=" footer-1 footerlogo">
@@ -187,7 +204,7 @@
         </div>
 
 
-    </footer>
+    </footer> -->
 
     <script src="./headerFooterManager.js"></script>
 </body>

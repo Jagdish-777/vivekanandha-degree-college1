@@ -14,6 +14,13 @@
 <body>
 
 <specia-header></specia-header>
+<!-- top section  -->
+<div class="top-bar-section">
+        <img src="./images/Courses/background-courses.png" alt="No Image">
+        <h1 class="top-bar-heading">
+            Careers
+        </h1>
+    </div>
 
 <h1 class="vdc-career-header">Application Form</h1>
 
@@ -113,6 +120,7 @@
 
         </div>
     </div>
+    <special-footer></special-footer>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const fileInput = document.getElementById('fileInput');

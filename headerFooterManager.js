@@ -21,7 +21,7 @@ class SpecialHeader extends HTMLElement{
             <a href="./vdcAboutus.php">About Us</a>
             <a href="./courses.php">Courses</a>
             <a href="./facilities.php">Facilities</a>
-            <a href="#">Gallery</a>
+            <a href="./vdcgallery.php">Gallery</a>
             <a href="./vdc-career.php">Career</a>
             <a href="./vdc-contact.php">Contact</a>
         </div>

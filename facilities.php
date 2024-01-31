@@ -442,6 +442,8 @@
         </div>
     </section>
 
+    <special-footer></special-footer>
+
 
 
     <script src="./headerFooterManager.js"></script>

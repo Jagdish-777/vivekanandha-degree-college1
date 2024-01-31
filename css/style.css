@@ -180,6 +180,25 @@ body {
 
 /* navigation css ending  */
 
+/* admission scrool bar css start */
+.scroll-admission-section{
+    border: 4px solid black;
+    border-radius: 50px;
+    /* margin-top: 20px; */
+}
+.scroll-admission-section a h1{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: orangered;
+    padding: 10px;
+    
+}
+.scroll-admission-section a h1 span{ 
+    color: black;
+}
+/* admission scrool bar css end */
+
 
 /* sticky social bar css  */
 /* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
@@ -189,6 +208,7 @@ body {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    z-index: 9;
 }
 
 /* Style the icon bar links */

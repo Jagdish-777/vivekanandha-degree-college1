@@ -1,183 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
     <style>
-        .new_footer_area {
-    background: #fbfbfd;
-    width: 100%;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
 
-.footerlogo {
-    margin-top: 3%;
-    width: 100%;
-    align-items: center;
-}
-.footerlogo img{
-    width: 100px;
-    height: auto;
-}
+            /* ----colors  */
+            --navigation-background: #f9f9f4;
+            --font-color-navigation: #c21c20;
+            --nav-hover-backgroung: #bfd0e2;
+            --font-color: #ff6900;
+            --font-hover-color: #ff7454;
+            --facilities-font-color: #185c74;
+            --nav-hover-backgroung-light: #d0dae6;
+            --black: black;
+            --white: white;
+        }
 
-.footer_container {
-    display: flex;
-    justify-content: center;
-    color: #555;
-    font-family: 'Poppins';
-    line-height: 20px;
-    width: 100%;
-    overflow: hidden;
-    background: #f5f4f3;
-}
+        body {
+            margin: 0px;
+            font-family: 'segoe ui';
+            background-color: var(--navigation-background);
+            font-size: 16px;
+        }
 
-.footertext {
-    color: #555;
-    text-decoration: none;
-}
+        /* navigation css starting  */
 
-.clickable-element:hover {
-    color: #e63131;
-    transition: all 0.3s ease;
-}
+        .nav {
+            height: 100px;
+            width: 100%;
+            background-color: var(--navigation-background);
+            position: sticky;
+            top: 0;
+            left: 0;
+            box-shadow: 5px 5px 5px gray;
+            z-index: 10;
+        }
 
-.footercontent {
-    text-decoration: none;
-    display: inline-block;
-    transition: all 0.3s ease;
-    padding-top: 5%;
-    color: #555;
-}
+        .nav>.nav-header {
+            display: inline;
+        }
 
-.footercontent:hover {
-    letter-spacing: 1px;
-    color: #e63131;
-}
+        .nav>.nav-header>.nav-title {
+            display: inline-block;
+            font-size: 22px;
+            color: #fff;
+            padding: 10px 10px 10px 60px;
+        }
 
-.footer-1 {
-    width: 100%;
-    font-size: 20px;
-    padding: 1%;
-    margin-top: 1%;
-}
+        .nav>.nav-header>.nav-title>img {
+            height: 120px;
+        }
 
-.hidden-list {
-    margin-left: 20px;
-}
+        .nav>.nav-btn {
+            display: none;
+        }
 
-.footerheading {
-    padding-top: 3%;
-    padding-bottom: 5%;
-    font-size: 25px;
-}
+        .nav>.nav-links>ul {
+            text-decoration: none;
+            display: inline;
+            float: right;
+            font-size: 18px;
+            margin-top: 24px;
+        }
 
-.footer-address {
-    margin-top: 4%;
-}
+        .nav>.nav-links>ul>li>a {
+            display: inline-block;
+            padding: 13px 10px 13px 10px;
+            position: relative;
+            text-decoration: none;
+            font-weight: 600;
+            color: var(--font-color-navigation);
+        }
 
-.email {
-    padding: 10%;
-    font-size: 20px;
-    font-family: 'Arial Narrow', Arial, sans-serif;
-}
+        /* hover animation  */
+        .nav>.nav-links>ul>li>a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 10px;
+            left: 0;
+            background-color: #0087ca;
+            color: var(--facilities-font-color);
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
 
-.gmaps {
-    width: 100%;
-    padding: 20px;
-}
+        .nav>.nav-links>a:hover::after {
+            transform: scaleX(1);
+            color: var(--facilities-font-color);
+            transform-origin: bottom left;
+        }
 
+        /* .nav>.nav-links>a:hover {
+    background-color: var(--facilities-font-color);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px grey;
+} */
 
-/*************footer End*****************/
+        .nav>#nav-check {
+            display: none;
+        }
 
-/* footer media query */
+        @media (max-width:800px) {
+            .nav>.nav-btn {
+                display: inline-block;
+                position: absolute;
+                right: 0px;
+                top: 0px;
+            }
 
+            .nav>.nav-links {
+                margin-top: 0;
+            }
 
-@media only screen and (max-width: 1000px) {
-    .footer_container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        width: 100%;
-        padding-left: 3%;
-    }
+            .nav>.nav-btn>label {
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                padding: 13px;
+                margin-top: 23px;
+                margin-right: 10px;
+            }
 
-    .footer-1 {
-        width: 100%;
-    }
+            .nav>.nav-header>.nav-title>img {
+                height: 100px;
+            }
 
-    .gmaps>iframe {
-        width: 100%;
-        padding-right: 3%;
+            .nav>.nav-header>.nav-title {
+                display: inline-block;
+                font-size: 22px;
+                color: #fff;
+                padding: 0px;
+            }
 
-    }
+            .nav>.nav-links>ul>li>a::after {
+                content: '';
+                height: 0px;
+            }
 
-    .footerheading {
-        color: #e66363;
-        text-decoration: underline #e66363;
-    }
+            .nav>.nav-btn>label:hover,
+            .nav #nav-check:checked~.nav-btn>label {
+                background-color: rgba(0, 0, 0, 0.3);
+            }
 
-    .footercontent {
-        padding-top: 2%;
-    }
+            .nav>.nav-btn>label>span {
+                display: block;
+                width: 25px;
+                height: 10px;
+                border-top: 2px solid var(--font-color-navigation);
+            }
 
+            .nav>.nav-links {
+                position: absolute;
+                display: block;
+                width: 100%;
+                background-color: var(--navigation-background);
+                height: 0px;
+                transition: all 0.3s ease-in;
+                overflow-y: hidden;
+                top: 100px;
+                left: 0px;
+            }
 
-}
+            .nav>.nav-links>ul>li>a {
+                display: block;
+                width: 100%;
+                /* width: auto; */
+            }
+
+            .nav>#nav-check:not(:checked)~.nav-links {
+                height: 0px;
+            }
+
+            .nav>#nav-check:checked~.nav-links {
+                height: auto;
+                overflow-y: auto;
+            }
+        }
     </style>
 </head>
+
 <body>
-    <footer class="new_footer_area bg_color">
-
-        <div class="footer_container">
-            <div class=" footer-1 footerlogo">
-                <img src="VDC-LOGO.svg" alt="">
+    <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+            <div class="nav-title">
+                <img src="VDC-LOGO.svg" alt="VDC">
             </div>
-            <div class="footer-1 adderss">
-                <h4 class="footerheading">Address</h4>
-                <p class="footer-address"><b>Lane Opp. B.J.P. Office & Kukatpally Busstop, Kukatpally, Hyderabad -
-                        500072</b></p><br>
-
-                <a class="footercontent" href="tel:9394068321" class="footertext"><b>93940 68321</b></a><br>
-                <a class="footercontent" href="tel:040-40116098" class="footertext"><b>040-4011 6098</b></a><br>
-                <a class="footercontent" href="#" class="footertext"><b>vdckukatpally@gmail.com</b></a>
-            </div>
-
-            <div class="footer-1 products">
-                <h4 class="footerheading">Quick Links</h4>
-                <a class="footercontent" href="#" class="footertext"><b>&gt; Courses</b> </a><br>
-                <a class="footercontent" href="#" class="footertext"><b>&gt; Facilities</b></a><br>
-                <a class="footercontent" href="#" class="footertext"><b>&gt; Gallery</b></a>
-            </div>
-
-
-            <div class="footer-1 about">
-                <h4 class="footerheading">Courses</h4>
-                <p class="clickable-element" onclick="toggleList1()"><b>&gt; U.G Courses</b> </p>
-                <ul class="hidden-list" id="myList1">
-                    <li><a class="footercontent" href="">B.A</a></li>
-                    <li><a class="footercontent" href="">B.B.A</a></li>
-                    <li><a class="footercontent" href="">B.Com</a></li>
-                    <li><a class="footercontent" href="">B.Sc</a></li>
-                </ul>
-
-                <p class="clickable-element" onclick="toggleList2()"><b>&gt; P.G Courses</b> </p>
-                <ul class="hidden-list" id="myList2">
-                    <li><a class="footercontent" href="">M.Com</a></li>
-                    <li><a class="footercontent" href="">M.Sc</a></li>
-                    <li><a class="footercontent" href="">M.Sc</a></li>
-                </ul>
-            </div>
-            <div class="footer-1 gmaps">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d243553.4722390783!2d78.413125!3d17.48253!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91a4e8e98e37%3A0x6e51dc8fd01e7f2a!2sVivekananda%20Degree%20College!5e0!3m2!1sen!2sin!4v1705918805307!5m2!1sen!2sin"
-                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-
+        </div>
+        <div class="nav-btn">
+            <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
         </div>
 
-
-    </footer>
+        <div class="nav-links">
+            <ul>
+                <li><a href="./Home.php">Home</a></li>
+                <li><a href="./vdcAboutus.php">About Us</a></li>
+                <li><a href="./courses.php">Courses</a></li>
+                <ul>
+                    <li>U.G Courses</li>
+                    <li>P.G Courses</li>
+                </ul>
+                <li><a href="./facilities.php">Facilities</a></li>
+                <li><a href="./vdcgallery.php">Gallery</a></li>
+                <li><a href="./vdc-career.php">Career</a></li>
+                <li><a href="./vdc-contact.php">Contact</a></li>
+            </ul>
+        </div>
+    </div>
 
 </body>
+
 </html>

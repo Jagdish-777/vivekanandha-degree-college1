@@ -33,7 +33,7 @@
         }
 
         body {
-            font-family: Poppins;
+            font-family: 'Poppins';
             /* font-family: 'Jost', sans-serif; */
             font-weight: 400;
             font-style: normal;
@@ -82,9 +82,10 @@
         }
 
         .About-home-content h2 {
-            font-size: 0.8rem;
+            font-size: 1.8rem;
             padding: 10px 10px;
             color: var(--font-hover-color);
+            color: black;
             text-decoration: underline;
         }
 
@@ -159,6 +160,16 @@
             justify-content: space-evenly;
             background-color: var(--white);
             overflow: hidden;
+            background-color: lightgray;
+        }
+        #container-card-heading{
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+            font-family: 'Poppins';
+            background-color: lightgray;
+            text-decoration: underline;
+            padding: 10px;
         }
 
         .card {
@@ -166,9 +177,12 @@
             /* max-width: 350px; */
             width: 40%;
             margin: 0 20px;
-            background: white;
+            background: var(--nav-hover-backgroung);
             transition: 0.4s;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            margin: 10px 0px;
+            border: 1px solid black;
         }
 
         .card:hover {
@@ -185,6 +199,7 @@
             height: 100%;
             width: 100%;
             object-fit: cover;
+            border-radius: 10px;
         }
 
         .card .top-text {
@@ -207,7 +222,7 @@
         .card .bottom-text {
             padding: 0 20px 10px 20px;
             margin-top: 5px;
-            background: white;
+            /* background: white; */
             opacity: 0;
             /* visibility: hidden; */
             transition: 0.1s;
@@ -254,6 +269,15 @@
                 width: 80%;
                 margin: 20px 0;
             }
+            #container-card-heading{
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: 'Poppins';
+            background-color: lightgray;
+            text-decoration: underline;
+            padding: 5px;
+        }
         }
     </style>
 
@@ -357,6 +381,7 @@
             padding: 8px;
             margin-bottom: 16px;
             box-sizing: border-box;
+            
         }
 
         button {
@@ -395,6 +420,9 @@
 <body>
 
     <specia-header></specia-header>
+    <div class="scroll-admission-section">
+        <a href="./admissions.php"><h1>Admissions are in progress -  <span class="auto-type"></span></h1></a>
+    </div>
 
     <!-- slider home page  -->
     <div class="slideshow-container">
@@ -437,8 +465,7 @@
                     Vivekananda Degree & PG college
                 </h1>
                 <p class="paragraph-about">
-                    Our College is well known for its academic excellence and overall development of the students. Some
-                    other education department public relations contracts total in the hundreds of thousands of dollars.
+                Vivekananda Degree College has carved a niche for itself over a period of two decades. Our relentless effort in imparting quality education through participatory teaching methodologies and pedagogical tools helped in chiseling personality of students.
                 </p>
                 <button class="btn">
                     Read more
@@ -460,10 +487,11 @@
     </div> -->
 
     <!-- cards section homepage  -->
+    <h1 id="container-card-heading">Our Key People:</h1>
     <div class="container">
         <div class="card">
             <div class="img">
-                <img src="#">
+                <img src="./images/about/knImage.jpeg">
             </div>
             <div class="top-text">
                 <div class="name">
@@ -479,20 +507,20 @@
                     reprehenderit quasi cum perspiciatis, minima reiciendis magni quam!
                 </div> -->
                 <div class="btn1">
-                    <a href="#">Read more</a>
+                    <a href="./vdcAboutus.php#chairman-msg">Read more</a>
                 </div>
             </div>
         </div>
         <div class="card">
             <div class="img">
-                <img src="#">
+                <img src="./images/about/knwifeimage.jpeg">
             </div>
             <div class="top-text">
                 <div class="name">
-                    Dr. K. Naresh
+                Smt. Lavanya Naresh
                 </div>
                 <p>
-                    Secretary & Correspondent
+                    Correspondent's Message
                 </p>
             </div>
             <div class="bottom-text">
@@ -501,32 +529,11 @@
                     reprehenderit quasi cum perspiciatis, minima reiciendis magni quam!
                 </div> -->
                 <div class="btn1">
-                    <a href="#">Read more</a>
+                    <a href="./vdcAboutus.php#correspondent-msg">Read more</a>
                 </div>
             </div>
         </div>
-        <!-- <div class="card">
-            <div class="img">
-                <img src="#">
-            </div>
-            <div class="top-text">
-                <div class="name">
-                    Dr. K. Naresh
-                </div>
-                <p>
-                    Secretary & Correspondent
-                </p>
-            </div>
-            <div class="bottom-text">
-                <div class="text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quaerat iusto adipisci
-                    reprehenderit quasi cum perspiciatis, minima reiciendis magni quam!
-                </div>
-                <div class="btn1">
-                    <a href="#">Read more</a>
-                </div>
-            </div>
-        </div> -->
+        
     </div>
     
 
@@ -607,6 +614,15 @@
             }
         }
     </script> -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed(".auto-type",{
+            strings: ["Enquire Now (DOST College Code: 11250)"],
+            typeSpeed: 50,
+            backSpeed: 50,
+            loop: true
+        })
+    </script>
     <script src="./headerFooterManager.js"></script>
     <script src="./js/app.js"></script>
 </body>

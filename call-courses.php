@@ -304,6 +304,8 @@
 
     </section>
 
+    <special-footer></special-footer>
+
 
     <script src="./headerFooterManager.js"></script>
     <script src="./js/app.js"></script>

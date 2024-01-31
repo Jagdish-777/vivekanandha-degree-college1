@@ -16,14 +16,20 @@
 </head>
 <body>
 <specia-header></specia-header>
+<!-- top section  -->
+<div class="top-bar-section">
+        <img src="./images/Courses/background-courses.png" alt="No Image">
+        <h1 class="top-bar-heading">
+            Contact Us
+        </h1>
+    </div>
 
     <section class="sect1">
         <div class="part1"><!----flex------>
             <div class="col1-part1"><!------flex------>
                 <div class="heading">
                     <h1>Contact</h1>
-                    <p>Feel free to reach out to Dr. Koradala Naresh and his team for inquiries, collaboration, or to share your thoughts.
-                        Your input is valuable, and your voice matters.</p>
+                    <p>We value your feedback and strive to provide the best possible support to our students, parents, and community members. Your input is invaluable to us.</p>
                 </div>
                 <!------division of icons ------>
                 <div class="social-media-flex-3"><!---flex-->
@@ -111,6 +117,8 @@
             </div>
         </div>
     </section>
+
+    <special-footer></special-footer>
     <!-- <section class="sect3">
         <div class="footer">
             <h4>@Copyright 2024 — Vivekanand Degree College. All rights reserved.</h4>
