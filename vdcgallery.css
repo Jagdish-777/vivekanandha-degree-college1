@@ -9,12 +9,12 @@ input{
     display: none;
 }
 
-.container{
+.container-gallery{
     width: 100%;
     text-align: center;
 }
 
-h1{
+.container-gallery h1{
     font-weight: normal;
     font-size: 35px;
     position: relative;
@@ -143,20 +143,20 @@ label:hover{
 }
 
 
-#check1:checked ~ .container .photo-gallery .pic{
+#check1:checked ~ .container-gallery .photo-gallery .pic{
     opacity: 1;
     transform: scale(1);
     position: relative;
     transition: .5s;
 }
 
-#check2:checked ~ .container .photo-gallery .Events{
+#check2:checked ~ .container-gallery .photo-gallery .Events{
     opacity: 1;
     transform: scale(1);
     position: relative;
 }
-#check2:checked ~ .container .photo-gallery .Workshops,
-#check2:checked ~ .container .photo-gallery .Annual{
+#check2:checked ~ .container-gallery .photo-gallery .Workshops,
+#check2:checked ~ .container-gallery .photo-gallery .Annual{
     opacity: 0;
     transform: scale(1);
     position: absolute;
@@ -164,13 +164,13 @@ label:hover{
 }
 
 
-#check3:checked ~ .container .photo-gallery .Workshops{
+#check3:checked ~ .container-gallery .photo-gallery .Workshops{
     opacity: 1;
     transform: scale(1);
     position: relative;
 }
-#check3:checked ~ .container .photo-gallery .Events,
-#check3:checked ~ .container .photo-gallery .Annual{
+#check3:checked ~ .container-gallery .photo-gallery .Events,
+#check3:checked ~ .container-gallery .photo-gallery .Annual{
     opacity: 0;
     transform: scale(1);
     position: absolute;
@@ -178,13 +178,13 @@ label:hover{
 }
 
 
-#check4:checked ~ .container .photo-gallery .Annual{
+#check4:checked ~ .container-gallery .photo-gallery .Annual{
     opacity: 1;
     transform: scale(1);
     position: relative;
 }
-#check4:checked ~ .container .photo-gallery .Events,
-#check4:checked ~ .container .photo-gallery .Workshops{
+#check4:checked ~ .container-gallery .photo-gallery .Events,
+#check4:checked ~ .container-gallery .photo-gallery .Workshops{
     opacity: 0;
     transform: scale(1);
     position: absolute;
@@ -199,7 +199,7 @@ label:hover{
         flex-direction: column;
         flex-wrap: wrap;
     }
-    .container{
+    .container-gallery{
         width: 100%;
     }
     

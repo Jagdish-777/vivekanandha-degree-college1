@@ -17,7 +17,7 @@ class SpecialHeader extends HTMLElement{
         </div>
 
         <div class="nav-links">
-            <a href="./Home.php">Home</a>
+            <a href="./index.php">Home</a>
             <a href="./vdcAboutus.php">About Us</a>
             <a href="./courses.php">Courses</a>
             <a href="./facilities.php">Facilities</a>
@@ -57,51 +57,71 @@ class SpecialFooter extends HTMLElement{
             </div>
             <div class="footer-1 adderss">
                 <h4 class="footerheading">Address</h4>
-                <p class="footer-address"><b>Lane Opp. B.J.P. Office & Kukatpally Busstop, Kukatpally, Hyderabad -
-                        500072</b></p><br>
-
-                <a class="footercontent" href="tel:9394068321" class="footertext"><b>93940 68321</b></a><br>
-                <a class="footercontent" href="tel:040-40116098" class="footertext"><b>040-4011 6098</b></a><br>
-                <a class="footercontent" href="#" class="footertext"><b>vdckukatpally@gmail.com</b></a>
+                <p class="footer-address">Lane Opp. B.J.P. Office & Kukatpally Busstop, Kukatpally, Hyderabad - 500072</p><br>
+    
+                <a class="footercontent" href="tel:9394068321" class="footertext">93940 68321</a><br>
+                <a class="footercontent" href="tel:040-40116098" class="footertext">040-4011 6098</a><br>
+                <a class="footercontent" href="#" class="footertext">vdckukatpally@gmail.com</a>
             </div>
-
+    
             <div class="footer-1 products">
                 <h4 class="footerheading">Quick Links</h4>
-                <a class="footercontent" href="#" class="footertext"><b>&gt; Courses</b> </a><br>
-                <a class="footercontent" href="#" class="footertext"><b>&gt; Facilities</b></a><br>
-                <a class="footercontent" href="#" class="footertext"><b>&gt; Gallery</b></a>
+                <ul class="hidden-list">
+                    <li><a class="footercontent" href="#" class="footertext">Courses </a></li>
+                    <li><a class="footercontent" href="#" class="footertext"> Facilities</a></li>
+                    <li><a class="footercontent" href="#" class="footertext"> Gallery</a></li>
+                </ul>
             </div>
-
-
+    
+    
             <div class="footer-1 about">
                 <h4 class="footerheading">Courses</h4>
-                <p class="clickable-element" onclick="toggleList1()"><b>&gt; U.G Courses</b> </p>
+                <p class="clickable-element" onclick="toggleList1()">&gt; U.G Courses </p>
                 <ul class="hidden-list" id="myList1">
                     <li><a class="footercontent" href="">B.A</a></li>
                     <li><a class="footercontent" href="">B.B.A</a></li>
                     <li><a class="footercontent" href="">B.Com</a></li>
                     <li><a class="footercontent" href="">B.Sc</a></li>
                 </ul>
-
-                <p class="clickable-element" onclick="toggleList2()"><b>&gt; P.G Courses</b> </p>
+                <script>
+                    function toggleList1() {
+                        var list = document.getElementById("myList1");
+                        if (list.style.display === "none") {
+                            list.style.display = "block";
+                        } else {
+                            list.style.display = "none";
+                        }
+                    }
+                </script>
+    
+                <p class="clickable-element" onclick="toggleList2()">&gt; P.G Courses </p>
                 <ul class="hidden-list" id="myList2">
                     <li><a class="footercontent" href="">M.Com</a></li>
                     <li><a class="footercontent" href="">M.Sc</a></li>
                     <li><a class="footercontent" href="">M.Sc</a></li>
                 </ul>
+                <script>
+                    function toggleList2() {
+                        var list = document.getElementById("myList2");
+                        if (list.style.display === "none") {
+                            list.style.display = "block";
+                        } else {
+                            list.style.display = "none";
+                        }
+                    }
+                </script>
             </div>
             <div class="footer-1 gmaps">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d243553.4722390783!2d78.413125!3d17.48253!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91a4e8e98e37%3A0x6e51dc8fd01e7f2a!2sVivekananda%20Degree%20College!5e0!3m2!1sen!2sin!4v1705918805307!5m2!1sen!2sin"
-                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-
+    
         </div>
-
-
+    
+    
     </footer>
-
         `
     }
 }

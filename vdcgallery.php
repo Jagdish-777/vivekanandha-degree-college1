@@ -26,7 +26,7 @@
     <input type="radio" name="photos" id="check3" >
     <input type="radio" name="photos" id="check4" >
 
-    <div class="container">
+    <div class="container-gallery">
         <h1>OUR PHOTO GALLERY</h1>
         <div class="top-content">
             <h3>Photo Gallery</h3>
