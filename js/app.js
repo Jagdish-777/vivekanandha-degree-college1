@@ -60,3 +60,22 @@ function toggleList2() {
     }
 }
 // footer toggel end 
+
+// sidebar toggle js 
+let arrow = document.querySelector('.arrow');
+let anchorAll1 = document.querySelector('.facebook');
+let anchorAll2 = document.querySelector('.twitter');
+let anchorAll3 = document.querySelector('.google');
+let anchorAll4 = document.querySelector('.linkedin');
+let anchorAll5 = document.querySelector('.youtube');
+
+arrow.addEventListener('click', ()=>{
+    anchorAll1.classList.toggle('block');
+    anchorAll2.classList.toggle('block');
+    anchorAll3.classList.toggle('block');
+    anchorAll4.classList.toggle('block');
+    anchorAll5.classList.toggle('block');
+
+})
+
+// sidebar toggle end 

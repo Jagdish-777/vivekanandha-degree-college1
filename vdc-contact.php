@@ -126,5 +126,6 @@
     </section> -->
 
     <script src="./headerFooterManager.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 </html>

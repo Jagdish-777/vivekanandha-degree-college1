@@ -12,31 +12,88 @@
     <link rel="stylesheet" href="./css/style.css">
 
     <!-- navbar style sheet  -->
+    <style>
+        .container-1 {
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            overflow: hidden;
+            background-color: var(--navigation-background);
+            /* margin-bottom: 30px; */
+        }
 
-    
+        .container-1 {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        section.enquery-form-home {
+            padding: 20px 0px;
+        }
+
+        .enquery-form {
+            background-color: var(--navigation-background);
+        }
+        #container-card-heading{
+            background-color: var(--navigation-background);
+        }
+        .About-home-container{
+            background-color: var(--navigation-background);
+        }
+        .home-logos-slider{
+            padding: 10px;
+        }
+        .btn a{
+            color: white;
+            text-decoration: none;
+        }
+        .icon-bar a{
+            display: none;
+        }
+        .icon-bar .block{
+            display: block;
+        }
+        .arrow{
+            color: white;
+            background-color: #e30505;
+            display: block;
+            text-align: center;
+            padding: 16px;
+            transition: all 0.3s ease;
+            color: white;
+            font-size: 20px;
+
+        }
+    </style>
+
+
 </head>
 
 <body>
 
     <specia-header></specia-header>
     <div class="scroll-admission-section">
-        <a href="./admissions.php"><h1>Admissions are in progress -  <span class="auto-type"></span></h1></a>
+        <a href="./admissions.php">
+            <h1>Admissions are in progress - <span class="auto-type"></span></h1>
+        </a>
     </div>
 
     <!-- slider home page  -->
     <div class="slideshow-container">
         <div class="mySlides fade">
-            
+
             <img src="./images/Home/slider/slider1.jpg" style="width:100%">
             <div class="text"></div>
         </div>
         <div class="mySlides fade">
-            
+
             <img src="./images/Home/slider/slider2.jpg" style="width:100%">
             <div class="text"></div>
         </div>
         <div class="mySlides fade">
-           
+
             <img src="./images/Home/slider/slider3.jpg" style="width:100%">
             <div class="text"></div>
         </div>
@@ -64,10 +121,12 @@
                     Vivekananda Degree & PG college
                 </h1>
                 <p class="paragraph-about">
-                Vivekananda Degree College has carved a niche for itself over a period of two decades. Our relentless effort in imparting quality education through participatory teaching methodologies and pedagogical tools helped in chiseling personality of students.
+                    Vivekananda Degree College has carved a niche for itself over a period of two decades. Our
+                    relentless effort in imparting quality education through participatory teaching methodologies and
+                    pedagogical tools helped in chiseling personality of students.
                 </p>
                 <button class="btn">
-                    Read more
+                    <a href="./vdcAboutus.php">Read More</a>
                 </button>
 
             </div>
@@ -76,7 +135,15 @@
 
     <!-- The social media icon bar -->
     <!-- <specia-Icon-Bar></specia-Icon-Bar> -->
-    <special-icon-bar></special-icon-bar>
+    <!-- <special-icon-bar></special-icon-bar> -->
+    <div class="icon-bar">
+        <i class="fa fa-arrow-right arrow" aria-hidden="true"></i>
+        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="google"><i class="fa fa-google"></i></a>
+        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+    </div>
     <!-- <div class="icon-bar">
         <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
         <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
@@ -116,7 +183,7 @@
             </div>
             <div class="top-text">
                 <div class="name">
-                Smt. Lavanya Naresh
+                    Smt. Lavanya Naresh
                 </div>
                 <p>
                     Correspondent's Message
@@ -132,9 +199,9 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
-    
+
 
     <!-- student enquery section home page  -->
     <section class="enquery-form-home">
@@ -215,12 +282,28 @@
     </script> -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
-        var typed = new Typed(".auto-type",{
+        var typed = new Typed(".auto-type", {
             strings: ["Enquire Now (DOST College Code: 11250)"],
             typeSpeed: 50,
             backSpeed: 50,
             loop: true
         })
+        let arrow = document.querySelector('.arrow');
+        let anchorAll1 = document.querySelector('.facebook');
+        let anchorAll2 = document.querySelector('.twitter');
+        let anchorAll3 = document.querySelector('.google');
+        let anchorAll4 = document.querySelector('.linkedin');
+        let anchorAll5 = document.querySelector('.youtube');
+
+        arrow.addEventListener('click', ()=>{
+            anchorAll1.classList.toggle('block');
+            anchorAll2.classList.toggle('block');
+            anchorAll3.classList.toggle('block');
+            anchorAll4.classList.toggle('block');
+            anchorAll5.classList.toggle('block');
+
+        })
+
     </script>
     <script src="./headerFooterManager.js"></script>
     <script src="./js/app.js"></script>

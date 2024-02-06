@@ -35,6 +35,7 @@ class SpecialIconBar extends HTMLElement{
     connectedCallback(){
         this.innerHTML = `
         <div class="icon-bar">
+        <i class="fa fa-arrow-right arrow" aria-hidden="true"></i>
         <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
         <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
         <a href="#" class="google"><i class="fa fa-google"></i></a>

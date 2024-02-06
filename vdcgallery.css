@@ -12,6 +12,7 @@ input{
 .container-gallery{
     width: 100%;
     text-align: center;
+    padding: 40px 0px;
 }
 
 .container-gallery h1{
