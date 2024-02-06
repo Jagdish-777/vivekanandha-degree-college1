@@ -472,6 +472,7 @@ img {
     overflow: hidden;
     white-space: nowrap;
     background-color: lightgray;
+    padding: 20px 0px;
 }
 
 .home-logos-slider h1 {
@@ -658,6 +659,7 @@ img {
 .About-home-container {
     min-width: 100%;
     background-color: var(---white);
+    background-color: var(--navigation-background);
     box-sizing: border-box;
     margin: 30px auto;
 }
@@ -753,15 +755,19 @@ img {
 /* about home css end */
 
 /* <!-- cards home page style sheet  --> */
-.container1 {
+.container-1 {
     padding: 0 40px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: var(--white);
     overflow: hidden;
-    background-color: lightgray;
+    background-color: var(--navigation-background);
     /* margin-bottom: 30px; */
+}
+.container-1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 #container-card-heading {
@@ -770,6 +776,7 @@ img {
     font-weight: 600;
     font-family: 'Poppins';
     background-color: lightgray;
+    background-color: var(--navigation-background);
     text-decoration: underline;
     padding: 10px;
     /* margin-top: 20px; */
@@ -862,7 +869,7 @@ img {
 }
 
 @media screen and (max-width: 978px) {
-    .container {
+    .container1 {
         flex-wrap: wrap;
         flex-direction: column;
     }
@@ -887,12 +894,17 @@ img {
 /* <!-- cards home page style sheet end --> */
 
 /* <!-- student enquery section home page  --> */
+section.enquery-form-home {
+    margin: 50px 0px;
+}
+
 .enquery-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--nav-hover-backgroung);
+    background-color: var(--navigation-background);
 
 }
 

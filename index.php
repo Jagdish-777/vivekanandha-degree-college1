@@ -87,7 +87,7 @@
 
     <!-- cards section homepage  -->
     <h1 id="container-card-heading">Our Key People:</h1>
-    <div class="container1">
+    <div class="container-1">
         <div class="card">
             <div class="img">
                 <img src="./images/about/knImage.jpeg">
