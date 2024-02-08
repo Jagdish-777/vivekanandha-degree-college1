@@ -124,6 +124,7 @@
             margin-left: 245px;
             opacity: 1;
             visibility: visible;
+            
         }
 
         /* @media(max-width : 860px) {
@@ -218,27 +219,19 @@
         <header>Menu</header>
         <a href="#" class="active">
             <i class="fas fa-qrcode"></i>
-            <span>Dashboard</span>
+            <span>About Us</span>
         </a>
         <a href="#">
             <i class="fas fa-link"></i>
-            <span>Shortcuts</span>
+            <span>Courses</span>
         </a>
         <a href="#">
             <i class="fas fa-stream"></i>
-            <span>Overview</span>
+            <span>Gallery</span>
         </a>
         <a href="#">
             <i class="fas fa-calendar"></i>
-            <span>Events</span>
-        </a>
-        <a href="#">
-            <i class="far fa-question-circle"></i>
-            <span>About</span>
-        </a>
-        <a href="#">
-            <i class="fas fa-sliders-h"></i>
-            <span>Services</span>
+            <span>Career</span>
         </a>
         <a href="#">
             <i class="far fa-envelope"></i>
