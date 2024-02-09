@@ -59,6 +59,7 @@
             margin-top: 20px;
             margin-left: 10px;
             max-width: 250px;
+            /* width:30%; */
             background-color: gray;
             /* background-color: #F6924F; */
             border: 1px solid black;
@@ -89,6 +90,7 @@
             list-style-type: none;
             width: 100%;
             width: 240px;
+            /* width:30%; */
         }
 
         #side-nav-bar ul li {
@@ -156,7 +158,8 @@
             margin: 20px;
             padding: 10px;
             border: 10px;
-            /* min-width: 80%; */
+            /* min-width: 70%;
+            max-width: 100%; */
             width: 100%;
             border: 1px solid black;
             border-radius: 10px;
