@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CKEditor -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/29.0.0/classic/ckeditor.js"></script>
     <style>
         * {
             margin: 0;
@@ -39,7 +43,8 @@
 
             font-size: 1.5rem;
         }
-        .menu-heading i{
+
+        .menu-heading i {
             padding: 10px;
             width: 10px;
         }
@@ -60,8 +65,8 @@
             border-radius: 10px;
             height: 100vh;
 
-            /* display: none; */
-            display: flex;
+            display: none;
+            /*display: flex;*/
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
@@ -119,7 +124,7 @@
             color: white;
         }
 
-        .sub-menu-1{
+        .sub-menu-1 {
             background-color: grey;
             border-radius: 10px;
             height: 0;
@@ -129,25 +134,29 @@
             */
             opacity: 0;
             visibility: hidden;
-            transition: all 0.3s ease; 
+            transition: all 0.3s ease;
         }
-        .visible-1{
+
+        .visible-1 {
             /* display: flex !important;
             */
             padding: 10px !important;
-            opacity: 1 !important; 
+            opacity: 1 !important;
             visibility: visible !important;
             height: auto;
         }
+
         .rotate {
             transform: rotate(180deg);
-            transition: transform 0.3s ease; /* Add transition for smooth rotation */
+            transition: transform 0.3s ease;
+            /* Add transition for smooth rotation */
         }
 
         #main-container .right-content-container {
             margin: 20px;
             padding: 10px;
             border: 10px;
+            /* min-width: 80%; */
             width: 100%;
             border: 1px solid black;
             border-radius: 10px;
@@ -170,46 +179,56 @@
     <div id="main-container">
         <nav id="side-nav-bar" class="side-nav-bar">
             <ul>
-                <li onclick="dropdown1(event)"><a href="sidebar.php?courses.php">Home</a><i class="fa-solid fa-chevron-down" id="sub-drop-down"></i>
-                <div class="sub-menu-1">
-                    <ul>
-                        <li><i class="fa-solid fa-plus"></i> <a href="#">View Home</a></li>
-                        <li><i class="fa-solid fa-bars-staggered"></i> <a href="Edit Home">Edit Home</a><li>
-                    </ul>
-                </div>
+                <li onclick="dropdown1(event)"><a href="sidebar.php?courses">Home</a><i
+                        class="fa-solid fa-chevron-down" id="sub-drop-down"></i>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><i class="fa-solid fa-plus"></i> <a href="#">View Home</a></li>
+                            <li><i class="fa-solid fa-bars-staggered"></i> <a href="Edit Home">Edit Home</a>
+                            <li>
+                        </ul>
+                    </div>
                 </li>
-                <li onclick="dropdown1(event)"><a href="!">About Us</a><i class="fa-solid fa-chevron-down" id="sub-drop-down"></i>
+                <li onclick="dropdown1(event)"><a href="!">About Us</a><i class="fa-solid fa-chevron-down"
+                        id="sub-drop-down"></i>
                     <div class="sub-menu-1">
                         <ul>
                             <li><i class="fa-solid fa-plus"></i> <a href="#">View About Us</a></li>
-                            <li><i class="fa-solid fa-bars-staggered"></i> <a href="Edit Home">Edit About Us</a><li>
+                            <li><i class="fa-solid fa-bars-staggered"></i> <a href="Edit Home">Edit About Us</a>
+                            <li>
                         </ul>
                     </div>
                 </li>
-                <li onclick="dropdown1(event)"><a href="!" >Courses</a><i class="fa-solid fa-chevron-down" id="sub-drop-down"></i>
+                <li onclick="dropdown1(event)"><a href="!">Courses</a><i class="fa-solid fa-chevron-down"
+                        id="sub-drop-down"></i>
                     <div class="sub-menu-1">
                         <ul>
                             <li><i class="fa-solid fa-plus"></i> <a href="#">View Courses</a></li>
-                            <li><i class="fa-solid fa-bars-staggered"></i> <a href="Edit Home">Edit Courses</a><li>
+                            <li><i class="fa-solid fa-bars-staggered"></i> <a href="Edit Home">Edit Courses</a>
+                            <li>
                         </ul>
                     </div>
                 </li>
-                <li onclick="dropdown1(event)"><a href="!">Gallery</a><i class="fa-solid fa-chevron-down" id="sub-drop-down"></i>
+                <li onclick="dropdown1(event)"><a href="!">Gallery</a><i class="fa-solid fa-chevron-down"
+                        id="sub-drop-down"></i>
                     <div class="sub-menu-1">
                         <ul>
                             <li><i class="fa-solid fa-plus"></i> <a href="#">View Gallery</a></li>
-                            <li><i class="fa-solid fa-bars-staggered"></i> <a href="Edit Home">Edit Gallery</a><li>
+                            <li><i class="fa-solid fa-bars-staggered"></i> <a href="Edit Home">Edit Gallery</a>
+                            <li>
                         </ul>
                     </div>
                 </li>
-                <li onclick="dropdown1(event)"><a href="!">Career</a><i class="fa-solid fa-chevron-down" id="sub-drop-down"></i>
+                <li onclick="dropdown1(event)"><a href="!">Career</a><i class="fa-solid fa-chevron-down"
+                        id="sub-drop-down"></i>
                     <div class="sub-menu-1">
                         <ul>
                             <li><i class="fa-solid fa-plus"></i> <a href="#">View Career</a></li>
                         </ul>
                     </div>
                 </li>
-                <li onclick="dropdown1(event)"><a href="!">Contact</a><i class="fa-solid fa-chevron-down" id="sub-drop-down"></i>
+                <li onclick="dropdown1(event)"><a href="!">Contact</a><i class="fa-solid fa-chevron-down"
+                        id="sub-drop-down"></i>
                     <div class="sub-menu-1">
                         <ul>
                             <li><i class="fa-solid fa-plus"></i> <a href="#">View Contact</a></li>
@@ -220,15 +239,22 @@
         </nav>
         <div class="right-content-container">
             <?php
-            if(isset($_GET['courses.php'])){
+            include('./includes/connect.php');
+            if(isset($_GET['courses'])){
                 include('courses.php');
+            }else{
+                echo "<h1>This is Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam facere vero eius, quas
+                    accusamus eligendi atque libero dignissimos, dolore at sapiente inventore voluptas consectetur.</h1>
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde molestiae dicta officia totam, eos expedita
+                    recusandae veniam incidunt praesentium quaerat architecto, ullam quis? Sapiente nostrum excepturi
+                    praesentium vitae. Nostrum culpa mollitia tenetur autem minus.</p>";
             }
 
 
             ?>
-            <!-- <h1>This is Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam facere vero eius, quas
+            <!--<h1>This is Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam facere vero eius, quas
                 accusamus eligendi atque libero dignissimos, dolore at sapiente inventore voluptas consectetur.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde molestiae dicta officia totam, eos expedita
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde molestiae dicta officia totam, eos expedita
                 recusandae veniam incidunt praesentium quaerat architecto, ullam quis? Sapiente nostrum excepturi
                 praesentium vitae. Nostrum culpa mollitia tenetur autem minus.</p> -->
         </div>
@@ -247,7 +273,7 @@
             // Toggle the 'fa-xmark' class
             burgerIcon.classList.toggle('fa-xmark');
         });
-        
+
         let downarrow = document.getElementById('sub-drop-down');
         let sideDropMenu = document.querySelector('.sub-menu-1');
 
@@ -264,6 +290,20 @@
             downArrow.classList.toggle('rotate');
         }
 
+    </script>
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- CKEditor Script -->
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#content'), {
+                toolbar: ['heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedlist', 'outdent', 'indent', 'imageUpload', 'blockQuote', 'insertTable', 'mediaEmbed', 'undo', 'redo']
+            })
+            .catch(error => {
+                console.error(error);
+            });
     </script>
 
 </body>

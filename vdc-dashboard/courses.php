@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Content Form</title>
 
-    <!-- Bootstrap CSS -->
+     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
-     <!-- CKEditor -->
+      <!--CKEditor -->
      <script src="https://cdn.ckeditor.com/ckeditor5/29.0.0/classic/ckeditor.js"></script>
 </head>
 <body>
@@ -54,7 +54,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <!-- CKEditor Script -->
-<script>
+<!-- <script>
     ClassicEditor
         .create(document.querySelector('#content'), {
             toolbar: ['heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedlist', 'outdent', 'indent', 'imageUpload', 'blockQuote', 'insertTable', 'mediaEmbed', 'undo', 'redo']
@@ -62,7 +62,7 @@
         .catch(error => {
             console.error(error);
         });
-</script>
+</script> -->
 
 </body>
 </html>
