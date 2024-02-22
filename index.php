@@ -10,9 +10,55 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-
     <!-- navbar style sheet  -->
     <style>
+        /* slider css  */
+        .slider-container {
+            margin: 0px 0px;
+            position: relative;
+            width: 100%;
+            height: 80vh;
+
+            /* box-shadow: 1px 1px 5px 2px rgba(0,0,0,0.75); */
+        }
+
+        .slid-img {
+            display: none;
+
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            width: auto;
+            padding: 16px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 20px;
+            user-select: none;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        @media (max-width:600px) {
+            .slider-container {
+                height: 40vh;
+            }
+        }
+
+        /* slider css end  */
         .container-1 {
             padding: 0 40px;
             display: flex;
@@ -28,8 +74,9 @@
             justify-content: space-evenly;
             align-items: center;
         }
-        @media (max-width:800px){
-            .container-1{
+
+        @media (max-width:800px) {
+            .container-1 {
                 flex-direction: column;
             }
         }
@@ -41,26 +88,33 @@
         .enquery-form {
             background-color: var(--navigation-background);
         }
-        #container-card-heading{
+
+        #container-card-heading {
             background-color: var(--navigation-background);
         }
-        .About-home-container{
+
+        .About-home-container {
             background-color: var(--navigation-background);
         }
-        .home-logos-slider{
+
+        .home-logos-slider {
             padding: 10px;
         }
-        .btn a{
+
+        .btn a {
             color: white;
             text-decoration: none;
         }
-        .icon-bar a{
+
+        .icon-bar a {
             display: none;
         }
-        .icon-bar .block{
+
+        .icon-bar .block {
             display: block;
         }
-        .arrow{
+
+        .arrow {
             color: white;
             background-color: #e30505;
             display: block;
@@ -68,16 +122,13 @@
             padding: 16px;
             transition: all 0.3s ease;
             color: white;
-            font-size: 20px;
+            font-size: 26px;
 
         }
     </style>
-
-
 </head>
 
 <body>
-
     <specia-header></specia-header>
     <div class="scroll-admission-section">
         <a href="./admissions.php">
@@ -85,11 +136,21 @@
         </a>
     </div>
 
+    <!-- slider content home page  -->
+    <!-- <div class="slider-container">
+        <img class="slid-img" src="./images/Home/slider/slider-1.jpg" alt="No Image">
+        <img class="slid-img" src="./images/Home/slider/slider2.jpg" alt="">
+        <img class="slid-img" src="./images/Home/slider/slider3.jpg" alt="">
+        <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+        <a class="next" onclick="moveSlide(1)">&#10095;</a>
+    </div> -->
+    <!-- slider content end home page  -->
+
     <!-- slider home page  -->
     <div class="slideshow-container">
         <div class="mySlides fade">
 
-            <img src="./images/Home/slider/slider1.jpg" style="width:100%">
+            <img src="./images/Home/slider-1.jpg" style="width:100%">
             <div class="text"></div>
         </div>
         <div class="mySlides fade">
@@ -285,6 +346,7 @@
             }
         }
     </script> -->
+    <script src="https://kit.fontawesome.com/b19824e628.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed(".auto-type", {
@@ -300,7 +362,7 @@
         let anchorAll4 = document.querySelector('.linkedin');
         let anchorAll5 = document.querySelector('.youtube');
 
-        arrow.addEventListener('click', ()=>{
+        arrow.addEventListener('click', () => {
             anchorAll1.classList.toggle('block');
             anchorAll2.classList.toggle('block');
             anchorAll3.classList.toggle('block');

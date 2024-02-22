@@ -10,60 +10,6 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Courses</title>
 
-    <!-- top bar css  -->
-    <style>
-        * {
-            margin: 0px;
-            padding: 0;
-            box-sizing: border-box;
-            --font-color: #ff6900;
-
-        }
-
-        .top-bar-section {
-            position: relative;
-            left: 0;
-            width: 100%;
-
-        }
-
-        .top-bar-section img {
-            width: 100%;
-            height: 300px;
-
-        }
-
-        .top-bar-section h1 {
-            position: absolute;
-            top: 45%;
-            left: 45%;
-            font-size: 32px;
-            font-family: 'Courier New', Courier, monospace;
-            color: #fff;
-            text-decoration: underline;
-            font-weight: 600;
-            text-transform: uppercase;
-
-        }
-
-        .top-bar-section h1:hover {
-
-            /* font-size: 36px; */
-            font-family: 'Courier New', Courier, monospace;
-            color: var(--font-color);
-
-        }
-
-        @media (max-width:600px) {
-            .top-bar-section h1 {
-                left: 40%;
-
-            }
-
-
-        }
-    </style>
-
     <!-- courses section in courses page  -->
     <style>
         * {
@@ -226,14 +172,11 @@
     <special-icon-bar></special-icon-bar>
 
     <?php
-    include("./vdc-dashboard/includes/connect.php");
-    include("./vdc-dashboard/function.php");
+    include("./admin/connections/dbconnect.php");
+    include("./admin/connections/function.php");
     $new = $_GET['page'];
     // $new = "B.C.A";
     $header_details = executeSelect('courses',$new);
-    
-    
-
     ?>
     <!-- top section  -->
     <div class="top-bar-section">
@@ -242,7 +185,6 @@
             Courses
         </h1>
     </div>
-
 
     <!-- courses section in courses page  -->
     <section class="courses">
@@ -284,7 +226,7 @@
         </div>
         <?php } ?>
 
-        <div class="course-forms">
+        <!-- <div class="course-forms">
             <form action="">
                 <div class="form-input-tags">
                     <label for="firstname"><input type="text" name="firstname" placeholder="First Name"></label>
@@ -295,18 +237,40 @@
                 <label for="message">Message:</label><textarea id="message" name="message" rows="4" required></textarea>
                 <br>
 
-        <input type="submit" value="Submit">
+                <input type="submit" value="Submit">
 
 
             </form>
-        </div>
+        </div> -->
 
 
     </section>
 
     <special-footer></special-footer>
 
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings: ["Enquire Now (DOST College Code: 11250)"],
+            typeSpeed: 50,
+            backSpeed: 50,
+            loop: true
+        })
+        let arrow = document.querySelector('.arrow');
+        let anchorAll1 = document.querySelector('.facebook');
+        let anchorAll2 = document.querySelector('.twitter');
+        let anchorAll3 = document.querySelector('.google');
+        let anchorAll4 = document.querySelector('.linkedin');
+        let anchorAll5 = document.querySelector('.youtube');
 
+        arrow.addEventListener('click', () => {
+            anchorAll1.classList.toggle('block');
+            anchorAll2.classList.toggle('block');
+            anchorAll3.classList.toggle('block');
+            anchorAll4.classList.toggle('block');
+            anchorAll5.classList.toggle('block');
+        })
+
+    </script>
     <script src="./headerFooterManager.js"></script>
     <script src="./js/app.js"></script>
 

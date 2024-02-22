@@ -166,7 +166,7 @@
         }
 
         .courses-cards .ug-courses p {
-            height: 110px;
+            height: 105px;
             overflow: hidden;
         }
 
@@ -234,8 +234,8 @@
         <div class="course-flex">
 
             <?php
-                include('./vdc-dashboard/includes/connect.php');
-                include('./vdc-dashboard/function.php');
+                include('./admin/connections/dbconnect.php');
+                // include('./vdc-dashboard/function.php');
 
                 $fetct_query = "SELECT * FROM `courses` WHERE course_title in ('B.sc Honors in Computer Science','B.A','B.C.A','BBA (Bachelor of Business Administration)')";
                 $result = mysqli_query($con,$fetct_query);

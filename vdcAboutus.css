@@ -291,7 +291,7 @@
 
 
 
-  * {
+  /* * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -380,11 +380,6 @@
 }
 
 
-/*************footer End*****************/
-
-/* footer media query */
-
-
 @media only screen and (max-width: 1000px) {
     .footer_container {
         display: flex;
@@ -415,4 +410,4 @@
     }
 
 
-}
+} */

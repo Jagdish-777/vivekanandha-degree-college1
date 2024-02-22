@@ -77,29 +77,31 @@
                     </div>                
                 </div>
             </div>
-            <div class="col2-part1 "><!----flex---->
-                <div class="heading2">
-                    <h2>Student Inquire Form</h2>
-                    <div class="contact-form">
-                        <form action="submit_form.php" method="post">
-                            <label for="name" class="required">Name:</label>
-                            <input type="text" id="name" name="name" required>
-            
-                            <label for="email" class="required">Email:</label>
-                            <input type="email" id="email" name="email" required>
-            
-                            <label for="subject" class="required">Subject:</label>
-                            <input type="text" id="subject" name="subject" required>
-            
-                            <label for="message" class="required">Message:</label>
-                            <textarea id="message" name="message" rows="4" required></textarea>
-                        </form>
-                    </div>
-                    <div class="submit-button">
-                        <button type="submit">Submit</button>
-                    </div>
+            <div class="col2-part1 ">
+    <div class="heading2">
+        <h2>Student Inquiry Form</h2>
+        <div class="contact-form">
+            <form action="vdc-contact.php" method="post">
+                <label for="name" class="required">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email" class="required">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="subject" class="required">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+                
+                <label for="message" class="required">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <!-- Submit Button -->
+                <div class="submit-button">
+                    <button type="submit">Submit</button>
                 </div>
-            </div>
+            </form>
+        </div>
+    </div>
+</div>
         </div>
     </section>
     <section class="sect2">
@@ -129,3 +131,39 @@
     <script src="./js/app.js"></script>
 </body>
 </html>
+
+
+<?php
+// Including database connection
+include('./admin/connections/dbconnect.php');
+
+// Handling form submission
+if($_SERVER["REQUEST_METHOD"]=="POST"){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+
+    // Validating form data
+    if($name=='' || $email=='' || $subject=='' || $message==''){
+        echo "<script>alert('please fill the details correctly')</script>";
+    } else {
+        // Inserting data into the database
+        $insert_query = "INSERT INTO contact (name, email, subject, message) VALUES (?, ?, ?, ?)";
+        $stmt = mysqli_prepare($con, $insert_query);
+
+        // Binding parameters
+        mysqli_stmt_bind_param($stmt, "ssss", $name, $email, $subject, $message);
+        
+        // Executing query
+        $result_query = mysqli_stmt_execute($stmt);
+
+        // Checking for successful submission
+        if($result_query){
+            echo "<script>alert('Submitted successfully.')</script>";
+        } else {
+            echo "<script>alert('Error: " . mysqli_error($con) . "')</script>";
+        }
+    }
+}
+?>

@@ -43,10 +43,19 @@
         </div>
 
         <div class="photo-gallery">
+        <?php
+            include("./admin/connections/dbconnect.php");
+
+            $gallery_query = "SELECT * FROM `gallery` WHERE `name` = 'Events'";
+            $gallery_res = mysqli_query($con,$gallery_query);
+
+            foreach($gallery_res as $row => $header){
+
+            ?>
             <div class="pic Events">
-                <img src="./images/gallery/slider1.jpg" alt="">
+                <img src="./images/gallery/<?=  $header['image']   ?>" alt="">
             </div>
-            <div class="pic Events">
+            <!-- <div class="pic Events">
                 <img src="./images/gallery/slider2.jpg" alt="">
             </div>
             <div class="pic Events">
@@ -57,11 +66,20 @@
             </div>
             <div class="pic Events">
                 <img src="./images/gallery/slider5.jpg" alt="">
-            </div>
+            </div> -->
+            <?php } ?>
+            <?php
+
+            $gallery_query = "SELECT * FROM `gallery` WHERE `name` = 'Workshops'";
+            $gallery_res = mysqli_query($con,$gallery_query);
+
+            foreach($gallery_res as $row => $header){
+
+            ?>
             <div class="pic Workshops">
-                <img src="./images/gallery/slider6.jpg" alt="">
+                <img src="./images/gallery/<?=  $header['image']   ?>" alt="">
             </div>
-            <div class="pic Workshops">
+            <!-- <div class="pic Workshops">
                 <img src="./images/gallery/slider7.jpg" alt="">
             </div>
             <div class="pic Workshops">
@@ -72,11 +90,21 @@
             </div>
             <div class="pic Workshops">
                 <img src="./images/gallery/slider10.jpg" alt="">
-            </div>
+            </div> -->
+
+            <?php } ?>
+            <?php
+
+            $gallery_query = "SELECT * FROM `gallery` WHERE `name` = 'Annual'";
+            $gallery_res = mysqli_query($con,$gallery_query);
+
+            foreach($gallery_res as $row => $header){
+
+            ?>
             <div class="pic Annual">
-                <img src="./images/gallery/slider11.jpg" alt="">
+                <img src="./images/gallery/<?=  $header['image']   ?>" alt="">
             </div>
-            <div class="pic Annual">
+            <!-- <div class="pic Annual">
                 <img src="./images/gallery/slider12.jpg" alt="">
             </div>
             <div class="pic Annual">
@@ -90,7 +118,8 @@
             </div>
             <div class="pic Annual">
                 <img src="./images/gallery/slider16.jpg" alt="">
-            </div>
+            </div> -->
+            <?php } ?>
         </div>
 
     </div>
