@@ -111,3 +111,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             console.error(error);
         });
 </script>
+<?php
+include('includes/footer.php');
+
+?>

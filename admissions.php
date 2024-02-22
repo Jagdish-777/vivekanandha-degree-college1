@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration Form</title>
-    <link rel="stylesheet" href="./css/style.css">
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" href="VDC-LOGO.svg" type="image/icon type">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <style>
         .nav{
             display: block;
@@ -25,7 +25,7 @@
 
     <div class="container">
             <h2 class="mt-4 text-center">Student Registration Form</h2>
-            <form action="demo.php" method="post">
+            <form action="" method="post">
                 <div class="form-group">
                     <label for="student_name">Student Name:</label>
                     <input type="text" class="form-control" id="student_name" name="student_name" required>
@@ -42,11 +42,11 @@
                 </div>
                 <div class="form-group">
                     <label>Gender:</label><br>
-                    <div class="form-check form-check-inline">
+                    <div class="form-check-inline">
                         <input class="form-check-input" type="radio" id="male" name="gender" value="male" required>
                         <label class="form-check-label" for="male">Male</label>
                     </div>
-                    <div class="form-check form-check-inline">
+                    <div class="form-check-inline">
                         <input class="form-check-input" type="radio" id="female" name="gender" value="female" required>
                         <label class="form-check-label" for="female">Female</label>
                     </div>
@@ -70,14 +70,15 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <!--  -->
-                    <div class="form-check" style="position:relative">
-                        <input class="form-check-input" style="position:absolute; left:-450px" type="checkbox" id="use_present_address" name="use_present_address">
+
+                    <div class="form-check-inline" style="position:relative">
+                        <input class="form-check-input mr-0"  type="checkbox" id="use_present_address" name="use_present_address">
                         <label class="form-check-label" for="use_present_address">
                             Use Present Address as Permanent Address
                         </label>
                     </div>
                 </div>
+                
                 <div id="permanent_address_fields" style="display: none;">
                     <div class="form-group">
                         <label for="permanent_address">Permanent Address:</label>

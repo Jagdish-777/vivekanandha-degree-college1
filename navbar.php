@@ -49,7 +49,7 @@
             padding: 10px 10px 10px 60px;
         }
 
-        .nav>.nav-header>.nav-title>img {
+        .nav>.nav-header>.nav-title>a>img {
             height: 120px;
         }
 
@@ -531,7 +531,7 @@
         <input type="checkbox" id="nav-check">
         <div class="nav-header">
             <div class="nav-title">
-                <img src="VDC-LOGO.svg" alt="VDC">
+                <a href="index.php"><img src="VDC-LOGO.svg" alt="VDC"></a>
             </div>
         </div>
         <div class="nav-btn">

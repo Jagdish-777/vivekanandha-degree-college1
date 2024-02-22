@@ -78,7 +78,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="courses1.php" class="nav-link">
+                <a href="./view_courses.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>View Courses</p>
                 </a>
@@ -168,6 +168,23 @@
                 <a href="./view_contact.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>View Contact Us</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Admissions
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="./view_admissions.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>View Admissions</p>
                 </a>
               </li>
             </ul>

@@ -245,7 +245,7 @@ body {
 
 .scroll-admission-section a h1 {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: orangered;
     padding: 10px;
@@ -253,7 +253,7 @@ body {
 }
 
 .scroll-admission-section a h1 span {
-    color: black;
+    color: #fff;
 }
 
 /* admission scrool bar css end */
@@ -320,7 +320,7 @@ body {
     padding: 16px;
     transition: all 0.3s ease;
     color: white;
-    font-size: 20px;
+    font-size: 26px;
 
 }
 

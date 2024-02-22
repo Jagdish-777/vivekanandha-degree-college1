@@ -237,7 +237,7 @@
                 include('./admin/connections/dbconnect.php');
                 // include('./vdc-dashboard/function.php');
 
-                $fetct_query = "SELECT * FROM `courses` WHERE course_title in ('B.sc Honors in Computer Science','B.A','B.C.A','BBA (Bachelor of Business Administration)')";
+                $fetct_query = "SELECT * FROM `courses` WHERE course_title in ('B.sc Honors in Computer Science','B.A','B.C.A','BBA (Bachelor of Business Administration)','BBA (RETAIL OPERATIONS)')";
                 $result = mysqli_query($con,$fetct_query);
 
                 while ($row = mysqli_fetch_assoc($result)) {
@@ -251,7 +251,7 @@
             ?>
 
         </div>
-        <h1 class="ug-course-heading">B.Com</h1>
+        <h1 class="ug-course-heading" id="B.com">B.Com</h1>
         <div class="course-flex">
 
             <?php
@@ -268,7 +268,7 @@
                 }
             ?>
         </div>
-        <h1 class="ug-course-heading">B.Sc. (Physical Sciences)</h1>
+        <h1 class="ug-course-heading" id="B.Sc">B.Sc. (Physical Sciences)</h1>
         <div class="course-flex">
 
                 

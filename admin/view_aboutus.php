@@ -64,14 +64,6 @@ include('includes/sidebar.php');
 
                 <?php
 include('./connections/dbconnect.php');
-// session_start();
-
-// // Check if user is not logged in
-// if (!isset($_SESSION['username'])) {
-//     // Redirect user to the login page
-//     header("Location: login.php");
-//     exit();
-// }
 
 $select_query = "select * from aboutus";
 $result_query = mysqli_query($con,$select_query);
@@ -102,7 +94,6 @@ if($result_query){
         <td><img src="../images/about/' . $correspondent_image . '" alt="Employee Image" width="50"></td>
         <td>
         <button class="btn btn-primary"><a href="update_aboutus.php?update_id='.$id.'" class="text-light">edit</a></button>
-        <button class="btn btn-danger"><a href="delete_aboutus.php?delete_id='.$id.'" class="text-light">Delete</a></button>
         </td>
         </tr>';
         $serial_number++;

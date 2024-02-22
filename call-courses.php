@@ -169,7 +169,15 @@
     <specia-header></specia-header>
 
     <!-- including social bar  -->
-    <special-icon-bar></special-icon-bar>
+    <!-- <special-icon-bar></special-icon-bar> -->
+    <div class="icon-bar">
+        <i class="fa fa-arrow-right arrow" aria-hidden="true"></i>
+        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="google"><i class="fa fa-google"></i></a>
+        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+    </div>
 
     <?php
     include("./admin/connections/dbconnect.php");
@@ -248,13 +256,8 @@
 
     <special-footer></special-footer>
 
+    <script src="https://kit.fontawesome.com/b19824e628.js" crossorigin="anonymous"></script>
     <script>
-        var typed = new Typed(".auto-type", {
-            strings: ["Enquire Now (DOST College Code: 11250)"],
-            typeSpeed: 50,
-            backSpeed: 50,
-            loop: true
-        })
         let arrow = document.querySelector('.arrow');
         let anchorAll1 = document.querySelector('.facebook');
         let anchorAll2 = document.querySelector('.twitter');

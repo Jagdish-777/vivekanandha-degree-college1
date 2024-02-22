@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <title>Login form</title>
+    <style>
+        body{
+            background-color: palegoldenrod;
+            background: url(../images/login/OQ3D3S0.jpg);
+        }
+        .card{
+            background: rgb(9,121,114);
+            background: linear-gradient(3deg, rgba(9,121,114,1) 0%, rgba(0,212,255,1) 100%);
+            box-shadow: 1px 1px 3px 3px rgb(131, 130, 130);
+        }
+    </style>
 </head>
 <body>
     <div class="container mt-5">

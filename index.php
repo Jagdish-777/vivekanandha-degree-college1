@@ -131,47 +131,19 @@
 <body>
     <specia-header></specia-header>
     <div class="scroll-admission-section">
-        <a href="./admissions.php">
-            <h1>Admissions are in progress - <span class="auto-type"></span></h1>
+        <a href="./admissions(1).php">
+            <h1>ADMISSIONS ARE IN PROGRESS - <span class="auto-type"></span></h1>
         </a>
     </div>
 
     <!-- slider content home page  -->
-    <!-- <div class="slider-container">
-        <img class="slid-img" src="./images/Home/slider/slider-1.jpg" alt="No Image">
-        <img class="slid-img" src="./images/Home/slider/slider2.jpg" alt="">
-        <img class="slid-img" src="./images/Home/slider/slider3.jpg" alt="">
+    <div class="slider-container">
+        <img class="slid-img" src="./images/Home//slider/slider1.jpg" alt="No Image">
+        <img class="slid-img" src="./images/Home//slider/slider2.jpg" alt="">
+        <img class="slid-img" src="./images/Home//slider/slider3.jpg" alt="">
         <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
         <a class="next" onclick="moveSlide(1)">&#10095;</a>
-    </div> -->
-    <!-- slider content end home page  -->
-
-    <!-- slider home page  -->
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-
-            <img src="./images/Home/slider-1.jpg" style="width:100%">
-            <div class="text"></div>
-        </div>
-        <div class="mySlides fade">
-
-            <img src="./images/Home/slider/slider2.jpg" style="width:100%">
-            <div class="text"></div>
-        </div>
-        <div class="mySlides fade">
-
-            <img src="./images/Home/slider/slider3.jpg" style="width:100%">
-            <div class="text"></div>
-        </div>
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
-    <br>
-    <!-- <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-    </div> -->
 
     <!-- about us - home page section  -->
     <section>
@@ -348,9 +320,45 @@
     </script> -->
     <script src="https://kit.fontawesome.com/b19824e628.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+        // navbar js 
+        var index_value = 1;
+
+        function slideShow() {
+        var x = 0;
+        setTimeout(slideShow, 2500); // Call slideShow function recursively every 2500 milliseconds
+        const slide_img = document.querySelectorAll(".slid-img");
+
+        for (x = 0; x < slide_img.length; x++) {
+            slide_img[x].style.display = "none";
+        }
+        
+        index_value++;
+        if (index_value > slide_img.length) {
+            index_value = 1;
+        }
+        if (index_value < 1) {
+            index_value = slide_img.length;
+        }
+        
+        slide_img[index_value - 1].style.display = "block";
+        }
+
+
+        // Start the slideshow when the page loads
+        slideShow();
+
+        // Function to move slide left or right
+        function moveSlide(n) {
+            index_value += n;
+            slideShow();
+        }
+    </script>
+
     <script>
         var typed = new Typed(".auto-type", {
-            strings: ["Enquire Now (DOST College Code: 11250)"],
+            strings: ["ENQUIRE NOW (DOST COLLEGE CODE: 11250)"],
             typeSpeed: 50,
             backSpeed: 50,
             loop: true
@@ -372,8 +380,9 @@
         })
 
     </script>
+
     <script src="./headerFooterManager.js"></script>
-        <script src="./js/app.js"></script>
+    <script src="./js/app.js"></script>
     <script>
         function toggleList1() {
             var list = document.getElementById("myList1");

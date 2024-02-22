@@ -68,9 +68,9 @@ class SpecialFooter extends HTMLElement{
             <div class="footer-1 products">
                 <h4 class="footerheading">Quick Links</h4>
                 <ul class="hidden-list">
-                    <li><a class="footercontent" href="#" class="footertext">Courses </a></li>
-                    <li><a class="footercontent" href="#" class="footertext"> Facilities</a></li>
-                    <li><a class="footercontent" href="#" class="footertext"> Gallery</a></li>
+                    <li><a class="footercontent" href="./courses.php" class="footertext">Courses </a></li>
+                    <li><a class="footercontent" href="./facilities.php" class="footertext"> Facilities</a></li>
+                    <li><a class="footercontent" href="./vdcgallery.php" class="footertext"> Gallery</a></li>
                 </ul>
             </div>
     
@@ -79,17 +79,17 @@ class SpecialFooter extends HTMLElement{
             <h4 class="footerheading">Courses</h4>
             <p class="clickable-element" onclick="toggleList1()"><b>&gt; U.G Courses</b> </p>
             <ul class="hidden-list" id="myList1" style="display: none;">
-                <li><a class="footercontent" href="">B.A</a></li>
-                <li><a class="footercontent" href="">B.B.A</a></li>
-                <li><a class="footercontent" href="">B.Com</a></li>
-                <li><a class="footercontent" href="">B.Sc</a></li>
+                <li><a class="footercontent" href="courses.php#U.G Courses">B.A</a></li>
+                <li><a class="footercontent" href="courses.php#U.G Courses">B.B.A</a></li>
+                <li><a class="footercontent" href="courses.php#B.com">B.Com</a></li>
+                <li><a class="footercontent" href="courses.php#B.Sc">B.Sc</a></li>
             </ul>
             
             <div>
                 <p class="clickable-element" onclick="toggleList2()"><b>&gt; P.G Courses</b> </p>
                 <ul class="hidden-list" id="myList2" style="display: none;">
-                    <li><a class="footercontent" href="">M.Com</a></li>
-                    <li><a class="footercontent" href="">M.Sc</a></li>
+                    <li><a class="footercontent" href="courses.php#P.G-Courses">M.Com</a></li>
+                    <li><a class="footercontent" href="courses.php#P.G-Courses">M.Sc</a></li>
                 </ul>
             </div>
         </div>
