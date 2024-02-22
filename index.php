@@ -311,7 +311,29 @@
 
     </script>
     <script src="./headerFooterManager.js"></script>
-    <script src="./js/app.js"></script>
+        <script src="./js/app.js"></script>
+    <script>
+        function toggleList1() {
+            var list = document.getElementById("myList1");
+            if (list.style.display === "none") {
+                list.style.display = "block";
+            } else {
+                list.style.display = "none";
+            }
+        }
+    </script>
+
+    <script>
+        function toggleList2() {
+            var list = document.getElementById("myList2");
+            if (list.style.display === "none") {
+                list.style.display = "block";
+            } else {
+                list.style.display = "none";
+            }
+        }
+    </script>
+    
 </body>
 
 </html>

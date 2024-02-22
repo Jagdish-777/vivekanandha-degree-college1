@@ -53,12 +53,13 @@ function toggleList1() {
 
 function toggleList2() {
     var list = document.getElementById("myList2");
-    if (list.style.display === "none") {
-        list.style.display = "block";
-    } else {
+    if (list.style.display === "block") {
         list.style.display = "none";
+    } else {
+        list.style.display = "block";
     }
 }
+
 // footer toggel end 
 
 // sidebar toggle js 
