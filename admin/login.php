@@ -13,7 +13,11 @@
         .card{
             background: rgb(9,121,114);
             background: linear-gradient(3deg, rgba(9,121,114,1) 0%, rgba(0,212,255,1) 100%);
-            box-shadow: 1px 1px 3px 3px rgb(131, 130, 130);
+            transition: all 0.4s ease;
+        }
+        .card:hover{
+            box-shadow: -1px -1px 14px 1px rgb(131, 130, 130);
+
         }
     </style>
 </head>
