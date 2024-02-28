@@ -190,6 +190,15 @@
             </ul>
           </li>
           <li class="nav-item">
+            <a href="./view_student_enquiry.php" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                View Student Enquiry
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="sign_up.php" class="nav-link">
               <!-- <i class="fa fa-registered left" aria-hidden="true"></i> -->
               <p>

@@ -5,7 +5,7 @@ class SpecialHeader extends HTMLElement{
         <input type="checkbox" id="nav-check">
         <div class="nav-header">
             <div class="nav-title">
-                <img src="VDC-LOGO.svg" alt="VDC">
+                <img src="VDC.svg" alt="VDC">
             </div>
         </div>
         <div class="nav-btn">
@@ -54,7 +54,7 @@ class SpecialFooter extends HTMLElement{
 
         <div class="footer_container">
             <div class=" footer-1 footerlogo">
-                <img src="VDC-LOGO.svg" alt="">
+                <img src="VDC.svg" alt="">
             </div>
             <div class="footer-1 adderss">
                 <h4 class="footerheading">Address</h4>

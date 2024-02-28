@@ -255,6 +255,11 @@ body {
 .scroll-admission-section a h1 span {
     color: #fff;
 }
+@media (max-width:900px){
+    .scroll-admission-section a h1{
+        font-size: 0.8rem;
+    }
+}
 
 /* admission scrool bar css end */
 
@@ -695,6 +700,7 @@ img {
 
     .footerheading {
         color: #000000;
+        color: #fff;
         text-decoration: underline #7e7d7d;
     }
 
@@ -867,6 +873,7 @@ img {
 
 .card:hover {
     height: 350px;
+    height: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -946,7 +953,8 @@ img {
 
     .card {
         /* max-width: 700px; */
-        width: 80%;
+        width: 90%;
+        height: auto;
         margin: 20px 0;
     }
 

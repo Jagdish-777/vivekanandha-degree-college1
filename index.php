@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Home</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="icon" href="VDC-LOGO.svg" type="image/icon type">
+    <link rel="icon" href="VDC.svg" type="image/icon type">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -126,24 +126,90 @@
 
         }
     </style>
+
+    <!-- slider  -->
+    <style>
+        .slider {
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 300%; /* Default width */
+        }
+
+        .slides img {
+            width: 100vw; /* Adjusted to 100% of viewport width */
+            height: auto;
+            object-fit: cover; /* Ensures the entire viewport width is covered */
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .slider {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .slider {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <specia-header></specia-header>
     <div class="scroll-admission-section">
-        <a href="./admissions(1).php">
+        <a href="./admissions.php">
             <h1>ADMISSIONS ARE IN PROGRESS - <span class="auto-type"></span></h1>
         </a>
     </div>
 
+    <section class="slider">
+        <button class="prev">&#10094;</button>
+        <div class="slides">
+            <img class="active" src="./images/Home//slider/slider1.jpg" alt="">
+            <img src="./images/Home//slider/slider2.jpg" alt="">
+            <img src="./images/Home//slider/slider3.jpg" alt="">
+            <!-- Add more images here -->
+        </div>
+        <button class="next">&#10095;</button>
+    </section>
+
     <!-- slider content home page  -->
-    <div class="slider-container">
+    <!-- <div class="slider-container">
         <img class="slid-img" src="./images/Home//slider/slider1.jpg" alt="No Image">
         <img class="slid-img" src="./images/Home//slider/slider2.jpg" alt="">
         <img class="slid-img" src="./images/Home//slider/slider3.jpg" alt="">
         <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
         <a class="next" onclick="moveSlide(1)">&#10095;</a>
-    </div>
+    </div> -->
 
     <!-- about us - home page section  -->
     <section>
@@ -206,10 +272,6 @@
                 </p>
             </div>
             <div class="bottom-text">
-                <!-- <div class="text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quaerat iusto adipisci
-                    reprehenderit quasi cum perspiciatis, minima reiciendis magni quam!
-                </div> -->
                 <div class="btn1">
                     <a href="./vdcAboutus.php#chairman-msg">Read more</a>
                 </div>
@@ -228,10 +290,6 @@
                 </p>
             </div>
             <div class="bottom-text">
-                <!-- <div class="text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quaerat iusto adipisci
-                    reprehenderit quasi cum perspiciatis, minima reiciendis magni quam!
-                </div> -->
                 <div class="btn1">
                     <a href="./vdcAboutus.php#correspondent-msg">Read more</a>
                 </div>
@@ -245,7 +303,7 @@
     <section class="enquery-form-home">
         <div class="enquiry-container flex">
             <div class="enquiry-sub enquery-form">
-                <form>
+                <form method="post" action="">
                     <h1 class="enquery-heading">
                         Student Inqure Form
                     </h1>
@@ -275,6 +333,28 @@
                 <img src="./images/Home/enquiry-form-img-home.jpg" alt="image">
             </div>
         </div>
+        <?php
+include('./admin/connections/dbconnect.php');
+
+if($_SERVER['REQUEST_METHOD'] == "POST"){
+    $firstname = $_POST['firstname'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $courses = $_POST['courses'];
+
+    //insert Query
+    $insert_query = "insert into student_enquiry(firstname,email,phone,courses) values(?,?,?,?)";
+    $stmt = mysqli_prepare($con,$insert_query);
+
+    mysqli_stmt_bind_param($stmt,"ssis",$firstname,$email,$phone,$courses);
+    $result = mysqli_stmt_execute($stmt);
+    if($result){
+        echo "<script>alert('form successfully submitted.')</script>";
+    }else{
+        echo "<script>alert('Error: " . mysqli_error($con) . "')</script>";
+    }
+}
+?>
 
     </section>
 
@@ -403,6 +483,68 @@
                 list.style.display = "none";
             }
         }
+    </script>
+
+<script>
+        window.addEventListener('load', function () {
+            const slides = document.querySelector('.slides');
+            const images = document.querySelectorAll('.slides img');
+
+            let counter = 0;
+            let slideWidth = images[0].clientWidth;
+            let intervalId;
+
+            // Calculate the width of slides dynamically
+            slides.style.width = `${images.length * 100}%`;
+
+            function slide() {
+                counter++;
+                if (counter === images.length) {
+                    counter = 0;
+                }
+                slides.style.transform = `translateX(-${slideWidth * counter}px)`;
+            }
+
+            function startTimer() {
+                intervalId = setInterval(slide, 4000);
+            }
+
+            startTimer();
+
+            document.querySelector('.prev').addEventListener('click', function () {
+                counter--;
+                if (counter < 0) {
+                    counter = images.length - 1;
+                }
+                slides.style.transition = 'transform 0.5s ease-in-out';
+                slides.style.transform = `translateX(-${slideWidth * counter}px)`;
+
+                clearInterval(intervalId);
+                startTimer();
+            });
+
+            document.querySelector('.next').addEventListener('click', function () {
+                counter++;
+                if (counter === images.length) {
+                    counter = 0;
+                }
+                slides.style.transition = 'transform 0.5s ease-in-out';
+                slides.style.transform = `translateX(-${slideWidth * counter}px)`;
+
+                clearInterval(intervalId);
+                startTimer();
+            });
+
+            window.addEventListener('resize', function () {
+                slideWidth = images[0].clientWidth;
+                slides.style.transition = 'none';
+                slides.style.transform = `translateX(-${slideWidth * counter}px)`;
+                setTimeout(() => {
+                    slides.style.transition = '';
+                }, 50);
+            });
+        });
+
     </script>
     
 </body>

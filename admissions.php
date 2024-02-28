@@ -24,108 +24,117 @@
 <specia-header></specia-header>
 
     <div class="container">
-            <h2 class="mt-4 text-center">Student Registration Form</h2>
-            <form action="" method="post">
-                <div class="form-group">
-                    <label for="student_name">Student Name:</label>
-                    <input type="text" class="form-control" id="student_name" name="student_name" required>
+        <h2 class="mt-4 text-center">Student Registration Form</h2>
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="student_name">Student Name:</label>
+                <input type="text" class="form-control" id="student_name" name="student_name" autocomplete="off" required >
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="father_name">Father Name:</label>
+                    <input type="text" class="form-control" id="father_name" name="father_name" autocomplete="off" required>
                 </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="father_name">Father Name:</label>
-                        <input type="text" class="form-control" id="father_name" name="father_name" required>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="mother_name">Mother Name:</label>
-                        <input type="text" class="form-control" id="mother_name" name="mother_name" required>
-                    </div>
+                <div class="form-group col-md-6">
+                    <label for="mother_name">Mother Name:</label>
+                    <input type="text" class="form-control" id="mother_name" name="mother_name" autocomplete="off" required>
                 </div>
-                <div class="form-group">
-                    <label>Gender:</label><br>
-                    <div class="form-check-inline">
-                        <input class="form-check-input" type="radio" id="male" name="gender" value="male" required>
-                        <label class="form-check-label" for="male">Male</label>
-                    </div>
-                    <div class="form-check-inline">
-                        <input class="form-check-input" type="radio" id="female" name="gender" value="female" required>
-                        <label class="form-check-label" for="female">Female</label>
-                    </div>
+            </div>
+            <div class="form-group">
+                <label>Gender:</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="male" name="gender" value="male" autocomplete="off" required>
+                    <label class="form-check-label" for="male">Male</label>
                 </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="female" name="gender" value="female" autocomplete="off" required>
+                    <label class="form-check-label" for="female">Female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="present_address">Present Address:</label>
+                <input type="text" class="form-control" id="present_address" name="present_address" autocomplete="off" required>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="present_district">District:</label>
+                    <input type="text" class="form-control" id="present_district" name="present_district" autocomplete="off" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="present_state">State:</label>
+                    <input type="text" class="form-control" id="present_state" name="present_state" autocomplete="off" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="present_pincode">Pincode:</label>
+                    <input type="text" class="form-control" id="present_pincode" name="present_pincode" autocomplete="off" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check-inline" style="position:relative">
+                    <input class="form-check-input" type="checkbox" id="use_present_address" name="use_present_address" autocomplete="off">
+                    <label class="form-check-label" for="use_present_address">
+                        Use Present Address as Permanent Address
+                    </label>
+                </div>
+            </div>
+            <div id="permanent_address_fields" style="display: none;">
                 <div class="form-group">
-                    <label for="present_address">Present Address:</label>
-                    <input type="text" class="form-control" id="present_address" name="present_address" required>
+                    <label for="permanent_address">Permanent Address:</label>
+                    <input type="text" class="form-control" id="permanent_address" name="permanent_address" autocomplete="off">
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-4">
-                        <label for="present_district">District:</label>
-                        <input type="text" class="form-control" id="present_district" name="present_district" required>
+                        <label for="permanent_district">District:</label>
+                        <input type="text" class="form-control" id="permanent_district" name="permanent_district" autocomplete="off">
                     </div>
                     <div class="form-group col-md-4">
-                        <label for="present_state">State:</label>
-                        <input type="text" class="form-control" id="present_state" name="present_state" required>
+                        <label for="permanent_state">State:</label>
+                        <input type="text" class="form-control" id="permanent_state" name="permanent_state" autocomplete="off">
                     </div>
                     <div class="form-group col-md-4">
-                        <label for="present_pincode">Pincode:</label>
-                        <input type="text" class="form-control" id="present_pincode" name="present_pincode" required>
+                        <label for="permanent_pincode">Pincode:</label>
+                        <input type="text" class="form-control" id="permanent_pincode" name="permanent_pincode" autocomplete="off">
                     </div>
                 </div>
-                <div class="form-group">
-
-                    <div class="form-check-inline" style="position:relative">
-                        <input class="form-check-input mr-0"  type="checkbox" id="use_present_address" name="use_present_address">
-                        <label class="form-check-label" for="use_present_address">
-                            Use Present Address as Permanent Address
-                        </label>
-                    </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" class="form-control" id="phone" name="phone" autocomplete="off" required >
                 </div>
-                
-                <div id="permanent_address_fields" style="display: none;">
-                    <div class="form-group">
-                        <label for="permanent_address">Permanent Address:</label>
-                        <input type="text" class="form-control" id="permanent_address" name="permanent_address">
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-4">
-                            <label for="permanent_district">District:</label>
-                            <input type="text" class="form-control" id="permanent_district" name="permanent_district">
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="permanent_state">State:</label>
-                            <input type="text" class="form-control" id="permanent_state" name="permanent_state">
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="permanent_pincode">Pincode:</label>
-                            <input type="text" class="form-control" id="permanent_pincode" name="permanent_pincode">
-                        </div>
-                    </div>
+                <div class="form-group col-md-6">
+                    <label for="Nationality">Nationality:</label>
+                    <input type="text" class="form-control" id="Nationality" name="Nationality" autocomplete="off" required>
                 </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="phone">Phone Number:</label>
-                        <input type="text" class="form-control" id="phone" name="phone" required>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="Nationality">Nationality:</label>
-                        <input type="text" class="form-control" id="Nationality" name="Nationality" required>
-                    </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" autocomplete="off" required>
+            </div>
+            <div class="form-group">
+                <label for="course_name">Course Name:</label>
+                <input type="text" class="form-control" id="course_name" name="course_name" autocomplete="off" required>
+            </div>
+            <div class="form-group">
+                <label>Choose Payment Type:</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="online" name="payment" value="online" autocomplete="off" required>
+                    <label class="form-check-label" for="online">online</label>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="offline" name="payment" value="offline" autocomplete="off" required>
+                    <label class="form-check-label" for="offline">offline</label>
                 </div>
-                <div class="form-group">
-                    <label for="course_name">Course Name:</label>
-                    <input type="text" class="form-control" id="course_name" name="course_name" required>
-                </div>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" style="position:absolute; left:-450px"  id="declaration" name="declaration" required>
-                    <label class="form-check-label" for="declaration">I hereby declare that the information provided above is true to the best of my knowledge.</label>
-                </div>
-                <button type="submit" class="btn btn-primary mt-3" name="submit">Submit</button>
-            </form>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" style="position:absolute; left:-450px" id="declaration" name="declaration" autocomplete="off" required>
+                <label class="form-check-label" for="declaration">I hereby declare that the information provided above is true to the best of my knowledge.</label>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3" name="submit">Submit</button>
+        </form>
     </div>
     <special-footer></special-footer>
-    <!-- Bootstrap JS (Optional) -->
+        <!-- Bootstrap JS (Optional) -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
         document.getElementById('use_present_address').addEventListener('change', function() {
@@ -159,6 +168,7 @@ if (isset($_POST['submit'])) {
     $Nationality = $_POST['Nationality'];
     $email = $_POST['email'];
     $course_name = $_POST['course_name'];
+    $payment_type = $_POST['payment'];
     $declaration = isset($_POST['declaration']) ? $_POST['declaration'] : '';
 
     // Check if checkbox for using present address as permanent address is checked
@@ -178,13 +188,22 @@ if (isset($_POST['submit'])) {
     // Perform any necessary validation before inserting into the database
 
     // Insert data into database
-    $insert_query = "INSERT INTO `admissions`(`student_name`, `father_name`, `mother_name`, `gender`, `present_address`, `present_district`, `present_state`, `present_pincode`, `permanent_address`, `permanent_district`, `permanent_state`, `permanent_pincode`, `phone_number`, `nationality`, `email`, `course_name`, `declaration`) 
-    VALUES ('$student_name','$father_name','$mother_name','$gender','$present_address','$present_district','$present_state',' $present_pincode ','$permanent_address','$permanent_district','$permanent_state','$permanent_pincode','$phone_number','$Nationality','$email','$course_name','$declaration')";
+    $insert_query = "INSERT INTO `admissions`(`student_name`, `father_name`, `mother_name`, `gender`, `present_address`, `present_district`, `present_state`, `present_pincode`, `permanent_address`, `permanent_district`, `permanent_state`, `permanent_pincode`, `phone_number`, `nationality`, `email`, `course_name`, `payment_type`, `declaration`) 
+    VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+    $stmt = mysqli_prepare($con,$insert_query);
 
-    $result = mysqli_query($con, $insert_query);
-    if ($result) {
-        echo "<script>alert('Record inserted successfully.')</script>";
-    } else {
+    mysqli_stmt_bind_param($stmt,"ssssssssisssiissss",$student_name,$father_name,$mother_name,$gender,$present_address,$present_district,$present_state,$present_pincode,$permanent_address,$permanent_district,$permanent_state,$permanent_pincode,$phone_number,$Nationality,$email,$course_name,$payment_type,$declaration);
+
+
+    $result = mysqli_stmt_execute($stmt);
+    if ($result){
+        if($payment_type === 'online'){
+            echo "<script>alert('you are being redirected to payment page'); window.location.href='online_payment_page.php';</script>";
+            exit();
+        }else{
+            echo "<script>alert('Form Submitted Successfully.');</script>";
+        }
+    }else{
         echo "Error: " . $insert_query . "<br>" . mysqli_error($con);
     }
 
