@@ -264,7 +264,15 @@
     <specia-header></specia-header>
 
     <!-- including social bar  -->
-    <special-icon-bar></special-icon-bar>
+    <!-- <special-icon-bar></special-icon-bar> -->
+    <div class="icon-bar">
+        <i class="fa fa-arrow-right arrow" aria-hidden="true"></i>
+        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="google"><i class="fa fa-google"></i></a>
+        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+    </div>
 
     <!-- top section  -->
     <div class="top-bar-section">
@@ -443,7 +451,24 @@
     </section>
 
     <special-footer></special-footer>
+    <script src="https://kit.fontawesome.com/b19824e628.js" crossorigin="anonymous"></script>
+    <script>
+        let arrow = document.querySelector('.arrow');
+        let anchorAll1 = document.querySelector('.facebook');
+        let anchorAll2 = document.querySelector('.twitter');
+        let anchorAll3 = document.querySelector('.google');
+        let anchorAll4 = document.querySelector('.linkedin');
+        let anchorAll5 = document.querySelector('.youtube');
 
+        arrow.addEventListener('click', () => {
+            anchorAll1.classList.toggle('block');
+            anchorAll2.classList.toggle('block');
+            anchorAll3.classList.toggle('block');
+            anchorAll4.classList.toggle('block');
+            anchorAll5.classList.toggle('block');
+
+        })
+    </script>
 
 
     <script src="./headerFooterManager.js"></script>

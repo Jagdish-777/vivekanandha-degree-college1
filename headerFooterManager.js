@@ -18,12 +18,12 @@ class SpecialHeader extends HTMLElement{
 
         <div class="nav-links">
             <a href="./index.php">Home</a>
-            <a href="./vdcAboutus.php">About Us</a>
+            <a href="./Aboutus.php">About Us</a>
             <a href="./courses.php">Courses</a>
             <a href="./facilities.php">Facilities</a>
-            <a href="./vdcgallery.php">Gallery</a>
-            <a href="./vdc-career.php">Career</a>
-            <a href="./vdc-contact.php">Contact</a>
+            <a href="./gallery.php">Gallery</a>
+            <a href="./career.php">Career</a>
+            <a href="./contact.php">Contact</a>
         </div>
     </div>
         `
@@ -70,7 +70,7 @@ class SpecialFooter extends HTMLElement{
                 <ul class="hidden-list">
                     <li><a class="footercontent" href="./courses.php" class="footertext">Courses </a></li>
                     <li><a class="footercontent" href="./facilities.php" class="footertext"> Facilities</a></li>
-                    <li><a class="footercontent" href="./vdcgallery.php" class="footertext"> Gallery</a></li>
+                    <li><a class="footercontent" href="./gallery.php" class="footertext"> Gallery</a></li>
                 </ul>
             </div>
     

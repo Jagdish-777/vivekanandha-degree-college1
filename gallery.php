@@ -55,18 +55,6 @@
             <div class="pic Events">
                 <img src="./images/gallery/<?=  $header['image']   ?>" alt="">
             </div>
-            <!-- <div class="pic Events">
-                <img src="./images/gallery/slider2.jpg" alt="">
-            </div>
-            <div class="pic Events">
-                <img src="./images/gallery/slider3.jpg" alt="">
-            </div>
-            <div class="pic Events">
-                <img src="./images/gallery/slider4.jpg" alt="">
-            </div>
-            <div class="pic Events">
-                <img src="./images/gallery/slider5.jpg" alt="">
-            </div> -->
             <?php } ?>
             <?php
 
@@ -79,18 +67,6 @@
             <div class="pic Workshops">
                 <img src="./images/gallery/<?=  $header['image']   ?>" alt="">
             </div>
-            <!-- <div class="pic Workshops">
-                <img src="./images/gallery/slider7.jpg" alt="">
-            </div>
-            <div class="pic Workshops">
-                <img src="./images/gallery/slider8.jpg" alt="">
-            </div>
-            <div class="pic Workshops">
-                <img src="./images/gallery/slider9.jpg" alt="">
-            </div>
-            <div class="pic Workshops">
-                <img src="./images/gallery/slider10.jpg" alt="">
-            </div> -->
 
             <?php } ?>
             <?php
@@ -104,21 +80,6 @@
             <div class="pic Annual">
                 <img src="./images/gallery/<?=  $header['image']   ?>" alt="">
             </div>
-            <!-- <div class="pic Annual">
-                <img src="./images/gallery/slider12.jpg" alt="">
-            </div>
-            <div class="pic Annual">
-                <img src="./images/gallery/slider13.jpg" alt="">
-            </div>
-            <div class="pic Annual">
-                <img src="./images/gallery/slider14.jpg" alt="">
-            </div>
-            <div class="pic Annual">
-                <img src="./images/gallery/slider15.jpg" alt="">
-            </div>
-            <div class="pic Annual">
-                <img src="./images/gallery/slider16.jpg" alt="">
-            </div> -->
             <?php } ?>
         </div>
 

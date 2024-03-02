@@ -4,6 +4,11 @@ $username = "root";
 $password = "";
 $database = "vdc";
 
+// $servername = "sg2plzcpnl504315";
+// $username = "Vdc_User1";
+// $password = "%zsjXyEn=xCC";
+// $database = "vdc";
+
 // Create a connection
 $con = new mysqli($servername, $username, $password, $database);
 

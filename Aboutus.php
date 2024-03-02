@@ -15,6 +15,13 @@
         .Principal_info{
             margin-left: 15px;
         }
+        @media (max-width: 900px){
+            .everything{
+                width: 100%;
+                overflow: hidden;
+                box-sizing: border-box;
+            }
+        }
     </style>
 </head>
 
@@ -29,7 +36,7 @@
         </h1>
     </div>
     <!-- Origin of the college -->
-
+<div class="everything">
     <div class="vdcabout">
         <h1>THE ORIGIN OF THE COLLEGE</h1>
         <P>Vivekananda Degree & P.G. College was established in 2005 to promote quality, modern and technical education
@@ -114,18 +121,6 @@
                 <div>
                     <h2>CHAIRMAN'S MESSAGE</h2>
                     <p><?= $header['chairman_message']?></p>
-                    <!-- <p>In the twilight Zone of life's National average, if iam asked "what is my drive to be centenarian
-                        batsman" My answer is,
-                        "In the inning I have played so far, I was bowled, caught behind LBW, Run out and all that, yet
-                        I played the game for my living, the drive was not
-                        survival but seeking 'Knowledge, for myself, for my society and for my nation. <br>
-
-                        On medium which I understood for acquisition and distribution of knowledge is GRADUATION. Our
-                        nation needs graduation of value,
-                        today more than any other time in history. The graduation Education has its price, it is
-                        inevitable but it should be based on value too.
-                        We at Vivekananda Degree & P.G. College affiliated to Osmania University are creating a blend of
-                        the two and offering it at an affordable prices to the students.</p> -->
                     <p class="names"> <b>Dr. K. Naresh </b> <sub>M.A, Ph.D</sub></p>
                 </div>
             </div>
@@ -156,6 +151,7 @@
         </div>
         <?php } ?>
     </div>
+</div>
 
 
     <special-footer></special-footer>

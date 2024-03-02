@@ -86,7 +86,7 @@
                     pedagogical tools helped in chiseling personality of students.
                 </p>
                 <button class="btn">
-                    <a href="./Aboutus.php">Read More</a>
+                    <a href="./vdcAboutus.php">Read More</a>
                 </button>
 
             </div>
@@ -221,27 +221,27 @@
             </div>
         </div>
         <?php
-            include('./admin/connections/dbconnect.php');
+include('./admin/connections/dbconnect.php');
 
-            if($_SERVER['REQUEST_METHOD'] == "POST"){
-                $firstname = $_POST['firstname'];
-                $email = $_POST['email'];
-                $phone = $_POST['phone'];
-                $courses = $_POST['courses'];
+if($_SERVER['REQUEST_METHOD'] == "POST"){
+    $firstname = $_POST['firstname'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $courses = $_POST['courses'];
 
-                //insert Query
-                $insert_query = "insert into student_enquiry(firstname,email,phone,courses) values(?,?,?,?)";
-                $stmt = mysqli_prepare($con,$insert_query);
+    //insert Query
+    $insert_query = "insert into student_enquiry(firstname,email,phone,courses) values(?,?,?,?)";
+    $stmt = mysqli_prepare($con,$insert_query);
 
-                mysqli_stmt_bind_param($stmt,"ssis",$firstname,$email,$phone,$courses);
-                $result = mysqli_stmt_execute($stmt);
-                if($result){
-                    echo "<script>alert('form successfully submitted.')</script>";
-                }else{
-                    echo "<script>alert('Error: " . mysqli_error($con) . "')</script>";
-                }
-            }
-        ?>
+    mysqli_stmt_bind_param($stmt,"ssis",$firstname,$email,$phone,$courses);
+    $result = mysqli_stmt_execute($stmt);
+    if($result){
+        echo "<script>alert('form successfully submitted.')</script>";
+    }else{
+        echo "<script>alert('Error: " . mysqli_error($con) . "')</script>";
+    }
+}
+?>
 
     </section>
 

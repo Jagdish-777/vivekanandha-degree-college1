@@ -241,6 +241,7 @@ body {
     position: sticky;
     top: 100px;
     background-color: var(--facilities-font-color);
+    z-index: 8;
 }
 
 .scroll-admission-section a h1 {
@@ -462,6 +463,293 @@ img {
 
 /* slider css home page end */
 
+
+/* slider css  */
+.slider-container {
+    margin: 0px 0px;
+    position: relative;
+    width: 100%;
+    height: 80vh;
+
+    /* box-shadow: 1px 1px 5px 2px rgba(0,0,0,0.75); */
+}
+
+.slid-img {
+    display: none;
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: auto;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 20px;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+@media (max-width:600px) {
+    .slider-container {
+        height: 40vh;
+    }
+}
+
+/* slider css end  */
+.container-1 {
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+    background-color: var(--navigation-background);
+    /* margin-bottom: 30px; */
+}
+
+.container-1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@media (max-width:800px) {
+    .container-1 {
+        flex-direction: column;
+    }
+}
+
+section.enquery-form-home {
+    padding: 20px 0px;
+}
+
+.enquery-form {
+    background-color: var(--navigation-background);
+}
+
+#container-card-heading {
+    background-color: var(--navigation-background);
+}
+
+.About-home-container {
+    background-color: var(--navigation-background);
+}
+
+.home-logos-slider {
+    padding: 10px;
+}
+
+.btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.icon-bar a {
+    display: none;
+}
+
+.icon-bar .block {
+    display: block;
+}
+
+.arrow {
+    color: white;
+    background-color: #e30505;
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 26px;
+
+}
+@media (max-width: 900px){
+    .icon-bar a {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .arrow{
+        padding: 10px;
+        font-size: 18px;
+    
+    }
+}
+
+
+/* <!-- slider  --> */
+
+.slider {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%;
+    /* Default width */
+}
+
+.slides img {
+    width: 100vw;
+    /* Adjusted to 100% of viewport width */
+    height: auto;
+    object-fit: cover;
+    /* Ensures the entire viewport width is covered */
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .slider {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .slider {
+        width: 100%;
+    }
+}
+
+/* why prefer us section  */
+.enquery-form-home {
+    background-color: #efefef;
+}
+
+.enquery-form {
+    background-color: #efefef;
+}
+
+.home-page-menu {
+    background-color: #efefef;
+    padding: 2% 6%;
+    text-align: center;
+}
+
+.home-page-menu>h1 {
+    color: #f57a25;
+    margin: 10px auto;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.home-page-menu>h2 {
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.home-page-menu p {
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.home-page-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+    padding: 0 6%;
+    justify-content: center;
+    text-align: center;
+}
+
+.home-page-features>div {
+    text-align: center;
+}
+
+.home-page-features>div h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.curriculam img {
+    /* width: 300px; */
+    height: 130px;
+}
+
+@media screen and (max-width: 1024px) {
+    .home-page-menu>p {
+        font-size: 0.8rem;
+        text-align: justify;
+    }
+
+    .home-page-features {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home-page-menu>h1 {
+        font-size: 1.4rem;
+    }
+
+    .home-page-menu>h2 {
+        font-size: 1rem;
+    }
+
+    .home-page-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .home-page-menu>h1 {
+        font-size: 1.2rem;
+    }
+
+    .home-page-menu>h2 {
+        font-size: 0.8rem;
+    }
+
+    .home-page-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* why prefer us section end  */
+
 /* top bar css  */
 .top-bar-section {
     position: relative;
@@ -548,6 +836,12 @@ img {
     margin: 20px auto;
     /* color: var(--font-color); */
     text-decoration: underline;
+    font-size: 2rem;
+}
+@media (max-width: 1000px){
+    .home-logos-slider h1 {
+        font-size: 1.4rem;
+    }
 }
 
 .logo-slide {
@@ -851,7 +1145,7 @@ img {
     font-size: 2rem;
     font-weight: 600;
     font-family: 'Poppins';
-    background-color: lightgray;
+    /* background-color: lightgray; */
     background-color: var(--navigation-background);
     text-decoration: underline;
     padding: 10px;
@@ -859,7 +1153,8 @@ img {
 }
 
 .card {
-    height: 300px;
+    /* height: 300px; */
+    height: auto;
     /* max-width: 350px; */
     width: 40%;
     margin: 0 20px;
@@ -897,13 +1192,23 @@ img {
     font-size: 25px;
     font-weight: 600;
     color: #202020;
+    padding-left: 10px;
 }
 
 .card .top-text p {
+    padding-left: 10px;
     font-size: 20px;
     font-weight: 600;
     color: #e74c3c;
     line-height: 20px;
+}
+.card .top-text .preview p{
+    padding: 10px;
+    font-size: 0.9rem;
+    font-family: "poppins",sans-serif;
+    font-weight: 400;
+    color: black;
+    /* line-height: 20px; */
 }
 
 .card .bottom-text {
@@ -911,15 +1216,19 @@ img {
     margin-top: 5px;
     /* background: white; */
     opacity: 0;
-    /* visibility: hidden; */
+    visibility: hidden;
     transition: 0.1s;
-    display: none;
+    /* display: none; */
+    height: 0px;
+    /* transition: all 0.4s ease-in-out; */
+
 }
 
 .card:hover .bottom-text {
     opacity: 1;
-    /* visibility: visible; */
-    display: block;
+    visibility: visible;
+    /* display: block; */
+    height: auto;
 }
 
 .card .bottom-text .text {
@@ -960,10 +1269,10 @@ img {
 
     #container-card-heading {
         text-align: center;
-        font-size: 1rem;
+        font-size: 2rem;
         font-weight: 600;
-        font-family: 'Poppins';
-        background-color: lightgray;
+        font-family: 'Poppins', sans-serif;
+        /* background-color: lightgray; */
         text-decoration: underline;
         padding: 5px;
     }
@@ -983,6 +1292,7 @@ section.enquery-form-home {
     align-items: center;
     background-color: var(--nav-hover-backgroung);
     background-color: var(--navigation-background);
+    background-color: #efefef;
 
 }
 
@@ -1054,7 +1364,122 @@ button:hover {
         /* border: 2px solid var(--black); */
 
     }
+    .enquiry-form{
+        background-color: #efefef;
+    }
 
 }
 /* student enquery section home page end  */
 
+/* courses css start  */
+.courses-cards {
+    /* margin: 10px; */
+    width: 100%;
+    /* border: 1px solid black; */
+    background-color: var(--navigation-background);
+
+
+}
+
+.courses-cards .course-flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px grey;
+    margin: 10px;
+
+}
+
+.ug-course-heading {
+    text-align: center;
+    margin: 10px;
+    text-decoration: underline;
+    /* background-color: var(--navigation-background); */
+
+}
+
+.courses-cards .ug-courses {
+    /* border: 1px solid black; */
+    width: 30%;
+    /* height: 300px; */
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 5px 5px 5px grey;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.courses-cards .ug-courses:hover {
+    background-color: var(--nav-hover-backgroung-light);
+    border-radius: 15px;
+    box-shadow: 7px 7px 5px grey;
+    cursor: pointer;
+}
+.ug-courses .ug-courses-small-content{
+    height: 110px;
+    overflow: hidden;
+}
+
+.courses-cards .ug-courses h1:hover {
+    color: var(--font-color);
+}
+
+.courses-cards .ug-courses h1 {
+    font-size: 100%;
+    margin: 10px;
+    text-decoration: underline;
+    /* height: 120px; */
+}
+
+.courses-cards .ug-courses p {
+    height: 105px;
+    overflow: hidden;
+}
+
+.courses-cards .ug-courses .btn-courses a {
+    font-family: "poppins",sans-serif;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 5px;
+}
+
+.btn-courses {
+    background-color: var(--font-color);
+    color: var(--black);
+    padding: 3px;
+    font-size: 0.8rem;
+    font-weight: 300;
+    border-radius: 30px;
+    /* margin: 5px; */
+    padding: 5px;
+    color: var(--white);
+
+    transition: all 0.4s ease-in-out;
+}
+
+.btn-courses:hover {
+    font-size: 1rem;
+}
+
+@media (max-width:800px) {
+    .courses-cards .course-flex {
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+
+    .courses-cards .ug-courses {
+        width: 95%;
+        padding: 5px;
+    }
+
+    .courses-cards .ug-courses {
+        box-shadow: 0px 0px 5px grey;
+    }
+
+}
+/* courses css end  */
